@@ -1,0 +1,2451 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Мат. мышление">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAHCElEQVR4nO3dSWxVdRTH8fOIGnVDjCHQeRBbmQqUUoqibNgZdzgGx4iCkKKUqQgFBWQsICCDOEVxikvjDhcgWgsF2jIVRNpCJ1MXkpiQsPC5uNJU6Cn/e+//f+/9n//vsyS377688+25j9fXPiIAAAAAAAAAAAAAAAAAADAnFfcdoHTVjLjvQnKlag/GefZYzoogAog+lEjjQBNaRFZJFHGgCUNMVzLE6K0TyjDJ9GNrcHMgi8gYWiGmNgfKiJKhR1v/5kAWMdK7QjRvDpQRL72Pv844UEYSaJyCtjhQRnLomoWeOFBG0miZiIY4UEYyhZ9L2DhQRpKFnI7xV0jBXqHiwNpIvjAzCh4HyrBF4EnhsgKsgHFgbdgl2LyCxIEybBRgarisAAtxAMt3HLim2Mvv7LA5gIU4gOUvDlxTbOdrgtgcwEIcwEIcwPIRB55wyKA+R2wOYCEOYCEOYCEOYCEOYCEOYCEOYCEOYCEOYCEOYCEOYCEOYCEOYCEOYCEOYCEOYCEOYCEOYEmLY29zx9r6Sy6cNAJ3xH0HdNrb3LHm1/+GtGJKoeCTRkPO5ug/pD1NEX0rx3LSyAiJo/+QPBGMKpaTRklCHLcOyWN0VLGcNGLWx8ENyWNoVLGcNHp2xzH4kDzaRxXLSWNhcRx13VdvOySPxlGplNF30u8v9Wo5aVwsjmNqxtDXS7IVD9bSh3oZRDSzaPjjBcNCnjFeFsdBRDUVhZH14beMbdOLh8T/kc6h2B0HRdWHg2WQgDjIfB9ulkEy4iCTfThbBomJg8z04XIZJCkO0t2H42WQsDhIXx8og+TFQTr6QBkegXFQuD5QRh+ZcVDQPlBGf6LeCXaTmopCItrX3KFy8J6mjsbev+u6/lK8cfFlkODN4fG1P1DGTYTHQT77UOFIGeRCHKS1D3fKIEfiIE19OFUGuRMHhe7DtTLIqTgoRB8OlkGuxUGB+nCzDHIwDiIads9dvo6//+47HSyDZL8INqDdTVfW1bf6+pJ9zR1polUVon7VUYVbm+ODRt9leD5s7lhd97v2+5NwDm2OXY1X1h8NUoZn/6lOIlo99QF99yjpXNkcO8OV4dl/qnPVLw7tDyc2x46Tlzcea9NyUx+d7kwTvfuwE/tDfhzvn7i8qaFN4w1+fLozTbTGgT6EX1a2+ymj6L57FY/85HTnip8vBrxP9pAcx7YT7ZuVy3iyaPiPM8vmKL8+9umZrrel9yE2jq3H27c0tCse/FTR8K3Ti4ekaGVF4dzxqn18dqar+sjFdNB7mHwy46g93l57XLWMp4tH1PZ7dXzFlMJ5E3IUv/bzs13VR36T2ofAOLY0tG9VLuOZ4hG104tuenV8eXnBfOU+vjjbvewnmX1I+9/K5oa27ScuKx787EMjNj9WNOCPTarLC1JEOxuvqNzOgXPdRLTh0QeF/QRG1ObYeMxHGc/xZXiWlRdUTsxVvLUD57qXHpa2P+TEsfFY246TqmXMGpWxadAyPEsn5y8oVe3jy5buJYcvSOpDyGVlw9FWxUsAEc0alaF+CVhSlp8iUlxIX7X0pIkGX0gWkbA51vsp4/nRPsrwLC7Lf6s0T/Hgr1t6Fh268I+IBWJ9HOvqW3cpl/HC6Mz104I8bVxUlrdwkmof35zvWXRYQh92x7G2/tLuJtUyXhyd+d60kYEXftWkvCrlPr4937Pw0Hnb+7A4jrruq3ualH7VkYheGhOqDM/CSXmLy/IVD/7uwh8/tOJPTcZkasZQxU8peHlM5rpHRmo56ZuluUvU+phTkv1EIf7UZHzmjs++bR+vjM1aq6kMz4LS3KWT8wc/Zk5J9kr733Nqdxx0uz5eHZtl4o0XlRMH60NGGSQgDuL7mD0u6x1jb8mpnJhbXV5w67+LKYNkxEED9TF7XJbpNwPPn5Cz/P99SCqDxLxCSkTe+zC8P9DzWkl2NL9mMm9CTipF3q87CCuDJMVBN/rovXa9JsIhvTE+J0WpP69dF1YGCYuDbvThwkkjIOQ5B5iAOICFOICFOICFOICFOICFOICFOICFOICFOICFOICFOICFOICFOICFOICFOICFOICFOICFOICFOICFOIDlI45U7UFz9wMioz5HbA5gIQ5gIQ5g+YsDTzts52uC2BzAQhzA8h0Hriz28js7bA5gIQ5gBYkDVxYbBZhawM2BPuwSbF64rAAreBxYHrYIPKlQmwN9JF+YGeGyAqywcWB5JFnI6WjYHOgjmcLPRc9lBX0kjZaJaHvOgT6SQ9csdD4hRR9JoHEKmv+3gj7ipffxN/UBqOmqGYZuGQZk4tvS1OscWCFRMvRoG//oZKwQo4x+Exp/hRQrxBzTj22kH7qOLaJFZN9vkcbRB5UEEP0OjieO/hDKIHBRBgAAAAAAAAAAAAAAALDev1UPrl+lGQJOAAAAAElFTkSuQmCC">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%22%2C%20%22short_name%22%3A%20%22%D0%9C%D0%B0%D1%82.%20%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%22%2C%20%22start_url%22%3A%20%22.%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22orientation%22%3A%20%22portrait%22%2C%20%22background_color%22%3A%20%22%23000000%22%2C%20%22theme_color%22%3A%20%22%23000000%22%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAHv0lEQVR4nO3dW2wUdRTH8VNAHyQxMbHbUt9gd1vaB198UgSKvKmIZQEviHhDRTQxeAW8RfBKFVBMlPtFfVMUWmgp1SB4eQW6LVi224ZuDd3FKIkaLF0fRgvS7nb%2Bc/5zO//f54kApUPOt/%2BZnZ2dIQIAAAAAAAAAAAAAAAAAAACAACnxewMuyi%2Bb6fcmhElJfYvfm0Dkb0AoRiO/evIhIHTjKo9L8jQgpOMZzzLyKCCk4wsPMnI9IKTjO1czGuPeP02oJxhcnYKLAaGe4HBvFq7swpBOYGnfnelfgVBPkGmfjuaAUE/w6Z2RzoBQT1honJS2gFBPuOial56AUE8YaZmau%2BeBQDwNAWH5CS/%2B7LgBoZ6wY06QFRDqkYEzRxwDAYvzgLD8SOJ4mliBgMVhQFh%2B5HE2U6xAwOIkICw/UjmYLFYgYEFAwKIcEPZfsqnOFysQsCAgYEFAwIKAgEUtIBxBm0BpyliBgAUBAQsCAhYEBCwICFgQELAgIGBBQMCCgIAFAQELAgIWBAQsCAhYEBCwICBgQUDAgoCABQEBCwICFgQELMID2tqWefn7U75864ZU9onWjoHBvC/f3TPj/N4AF21ry6w80klEeaLXb5zk5bduSGWXtLYPDOYHBvMbZlSNGxOghxvrJXYF2taWWXGk0/r1luO9L3m4DjV0/VsPEe1N9cteh2QGtD15sR6LZw01dGWXHGy/tBjZDQkMaHsys/xw5/Df96Ch4fVYBDckLaBC9Vi2HO9175i6sUA9FqkNiQpoRzKzonA9ls3uNNTYlX28cD0WkQ3JCWhnsm/54U47w9HekJ16LPIakhPQ%2BCvHlth%2BsayxoX1pu/VYxl8xdoz9DQ08OQHVRSPraqvsn3DR0tC%2BdPaxFoV65leWr5kal3RWSE5A5KihVxgNoR4SFhCpN7TJaUP70znUQ/ICIk8a2p/OPdqSRD0kMiAiqotG1k53qyHVeubFy6TWQ1IDIqI5MVcaclBP/bRKqfWQ4IDIUUOv/lCsoSbUM4zkgEi9oY3HCjbUlM4tRj3DCA%2BINDWEegqRHxARzYlF3p%2BuMM7LGmruRj0FGREQESViZc4aau7OLT6gUM9ck%2Boh2Ze0XiYRKyOip789YTOGjcd6e8791dpz9m%2BVet4zqR4yKiBSb6gpnbP/jxtYD5mzCxuiui%2Bzycx6yMCAyGpI67CNrYfMDIiIEnFtDSUMroeMDYg0NaQxxJAyNyBijx/1kOEBESMC1GMxPSAiSsTLHqy5TulL4tdchXosCIgO9pzdnswofcnJX/9Y9VPKpe0JF9MDauk5%2B1Bzm/1zzUM%2BPnr6tR/RkNkBHejOPeyoHssnR08Xv37IBOYG1Nyde%2BRA0nE9liLXDxnC0ICs99iZ9VgMb8jEgJrSGtaeS208xvp8WagZF9B%2BxWsLbdrk5n0/gsysgPals0pXxd9QdrX9cz2bvb0PWkAYFFBjl9onkeuikS9mXV8/TeEjXVuO9648Msr9ZYQx5YIy%2B3dgsQxdij%2B/spyInjl00uaXbm3L5IlW3xR1vKnhYsQK1KBYTyJWdukHOeZXlitd5rytLWPzTkUCyA%2BoIVXsznPDJeIjXLI4T/GiH%2BtOeyY0JDygvan%2BoTvu2jG38HvsRf5oRDuSmRcP/yy%2BIckB7VG8n9yoy4zqJRw7k30vfCe8IbEB7Un1L1Wpx%2BaBzog7uCJ2tQtvSOarsK9P9S9t7biQd%2BX%2BPaqfDdrV3kdEb90cE3n5kMAV6CvFeu6qLFc62UPDXqaNald73/OHZK5D0gLa3XnmSZV67q4qXzMt7mBtmBOLrKutsn9j2E87%2Bp47dFJeQ6IC2t155qlvTtiv556q8nenOqnHUheNrK2ttN/QZx2/PCuuITkBfalYz71VE95h1GOpi0bWqTT0ubiG5AR07vzAoO16Fkye8PZUPUe1d0Yj61Ua%2Bv38wAXcqT6AFlZXrJ4StTPGBZMn6H1NNNt2Q7dOvPajGZMlPX9OTkBEdH91xeopo7yLeV%2B15noss6ORD2aMckwtrx4SFhAR3V9d8UbhhhZWV7w5xa3zMXdMKv2wcEMi6yF5AZG1Do10NYXVlqsDnFWgIan1kMiAiGhRzeUNeVCPZdak0g23/O8pu4LrIakBEdGimopV/zW0qKbYfk272yeWDj2pWXY9JPW9MMsDNRVElPrtT4%2Bf%2BU1Et00sJaLGruz6WsnP/CYitf9bftlMl7YDAqWkvsXm3xS7CwNvICBgQUDAgoCABQEBCwICFgQELAgIWBAQsCAgYEFAwIKAgAUBAQsCAhYEBCwICFgQELAgIGBBQMCCgIAFAQELAgIWtYDsf9oDwktpyliBgAUBAQsCAhYEBCzKAeE4WjbV%2BWIFAhYEBCxOAsJeTCoHk8UKBCwOA8IiJI%2BzmWIFAhbnAWERksTxNLECAQsrICxCMnDmyF2B0FDYMSeoYReGhsKLPzscAwGLnoCwCIWRlqlpW4HQULjompfOXRgaCguNk9J8DISGgk/vjPQfRKOhINM%2BHRefRIRH%2BwSKSz/YLr6Mx1IUHO7Nwt3zQGgoCFydgkcP08PuzBce/AB7%2BjRGZOQZz9Z%2BHx7niYxc5fFhg5/Pg0VJGvl1uBmgBwqjJyV4gQIAAAAAAAAAAAAAAAAAACDUP3/abdghjA3DAAAAAElFTkSuQmCC%22%2C%20%22sizes%22%3A%20%22192x192%22%2C%20%22type%22%3A%20%22image/png%22%2C%20%22purpose%22%3A%20%22any%22%7D%2C%20%7B%22src%22%3A%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAAY0UlEQVR4nO3deZSeV2Hf8VdY22gdjRZr927JWmZsQgCzeJEdG0szOW212OzEBNqSA6TlnLRNmibN1nAaSkNYAsVmMYmxlqStRjJ2HQNJCCELeEaSF/Au2diytY7WsYz7x0MUgaSZd97t3vvcz%2BcvH1nWe8/7aH5fP8%2BMRpUKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0zqjQB8jdKx%2B5PvQRIKRRH7sv9BHyJQCtY%2BuhSqrQGgLQRBYfGkIPmkQAGszoQ1OJQQMJQAMYfQhCDOokALWz%2BxAJJaiNANTC9EOEZGCkBGAE7D4kQQmqJABVMf2QHBkYlgAMw/RD0mRgCAJwVqYfSkMGzkgAzsD0QynJwE8RgJ9g%2BqH0ZOAkAfgx0w9ZkYGKAFRMP2Qs8wy8KvQBArP%2BkLPMFyDfO4DMLzxwqjxvBTK9A7D%2BwKny3IQcA5DnlQaGluEy5PUIKMMLDIxUPo%2BDMroDsP5ANfLZilwCkM8VBeqXyWKU/xFQJhcSaIZyPw4q%2BR2A9QfqUe4NKXMAyn3lgNYo8ZKUNgAlvmZAi5V1T8oZgLJeLSCUUq5KCQNQyusEBFe%2BbSlbAMp3hYB4lGxhShWAkl0bIEJl2pnyBKBMVwWIWWnWpiQBKM31AJJQjs0pQwDKcSWAtJRgeZIPQAmuAZCo1Pcn7QCk/u4DqUt6hRIOQNLvO1Aa6W5RwgEAoB6pBiDd5ALlk%2BgiJRmARN9roMRS3KX0ApDiuwzkILl1Si8AADREYgFILrBAVtLaqJQCkNY7C%2BQpoaVKJgAJvadA5lLZq2QCAEBjpRGAVHIKUEhitRIIQBLvI8BPiX%2B7EggAAM0QewDiTyjA2US%2BYLEHAIAmiToAkccTYFgx71jUAQCgeeINQMzZBKhetGsWbwAAaKpIAxBtMAFqEOemRRoAAJotxgDEmUqAekS4bDEGAIAWiC4AEUYSoCFi27foAgBAa8QVgNjyCNBYUa1cXAEAoGUEACBTEQUgqjsjgCaJZ%2BsiCgAArRRLAOJJIkCzRbJ4sQQAgBYTAIBMRRGASO6GAFomht2LIgAAtJ4AAGRKAAAyFT4AMTwIA2i94OsXPgAABCEAAJkSAIBMBQ5A8EdgAAGF3UB3AACZEgCATAkAQKYEACBTIQPgM8AAAZfQHQBApgQAIFMCAJApAQDIlAAAZEoAADIVLAC%2BBhSgEGoP3QEAZEoAADIlAACZEgCATAkAQKYEACBTAgCQKQEAyJQAAGRKAAAyJQAAmRIAgEwJAECmBAAgUwIAkCkBAMiUAABkSgAAMiUAAJkSAIBMCQBApgQAIFMCAJApAQDIlAAAZEoAADIlAACZEgCATAkAQKYEACBTAgCQKQEAyJQAAGRKAAAyJQAAmRIAgEwJAECmBAAgUwIAkCkBAMiUAABkSgAAMiUAAJkSAIBMCQBApgQAIFMCAJApAQDIlAAAZEoAADIlADTFJx/Y%2Bd/%2B7onQpyiDgcETb9u67Xu7B0IfhBIaHfoAlNCp6/%2BfXntB2MMkbWDwxC1btz2we%2BC7uwfuXLn8ilmTQ5%2BIUnEHQIOduv7uA%2Bpxcv2Lf36r%2BwAaTQBopNMX/5MP7Pw9DRi5U9f/5I9oAI0lADTM2f5//1MaMEKnr//JH9cAGkgAaIw/GvJpjwZU72zrf/LfagCNIgA0wB89sPP3h9v3Tz2w83e/owHDGHr9T/6ct27t1wDqJwDUq5r1L3y6TwOGMjB44pYtw6z/P/3MlzWA%2BgkAdal%2B/QsacDY/Xv8Xqt10DaB%2BAkDtRrr%2BBQ043UjX/5/%2BKw2gLgJAjT7xvadrWP/Cp/t2/s53Hm/sedJ1sKb1LxQN%2BO7ugw0/FTkQAGrxie89/dG/f7KeX%2BEzfbs0oFLf%2BhcGBl9%2B29ZtGkANBIARq3/9CxpQrH9fHetf0ABqIwCMTKPWv/CZvl2//beZNqBR61/QAGogAIxAY9e/8Mf9OTagsetf0ABGSgCoVjPWv5BbA5qx/gUNYEQEgKo0b/0L%2BTSgeetfKBrwj89rAMMTAIbX7PUv/HH/rt8qewMOHD9xc29/89a/MDD48tvv1gCGJwAMozXrX/hsqRtw4PiJW7b09794qAWvpQFUQwAYSivXv1DWBrRy/QsawLAEgLNq/foXPtu/67%2BWqwGtX/%2BCBjA0AeDMnjp49OPffTrUq3%2BuRA04cPzEzSHWvzAw%2BPKv/81jQV6a%2BAkAZ3belLbP/9ySsecE%2Bx1SjgYU678t0PpXKpULp7Z94caloV6dyAkAZ3Xdwg4NqEcM67%2Bxp%2BvcCWNDHYDICQBDuW5hx22hG/Cb307yCUbw9b%2BovW2T9WdIAsAwVoRuwP/a9kxyDYhh/Td2d82y/gxJABieBoyI9ScVAkBVVizsuO0GDRie9SchAkC1VizQgGHsP35infUnHQLACGjAEPYfP3Hzlv7t1p90CAAjs2JBx%2B0acJrg639x%2BwTrz0gJACN2rQb8pBjWf0N3p/VnpASAWsTQgN%2BI4zscWH/SJQDUKHgDPr89fAOsP0kTAGqXeQP2Hz%2Bxrtf6kzABoC7XLuj4wo1LxwVtwH8J0YBi/XfsCbb%2Bl1h/6iYA1Oua%2BdNuD9qA21regCjWv8f6Uy8BoAGyasC%2BYy/FsP4z26w/9RIAGuOa%2BdPCPgu6bfszLfibT/Yde2ndFutPSQgADXN16Abc3uQGFOv/4J7DzXuJoVl/GksAaKQSNyD4%2Bl86zfrTYAJAg109f9oXS9eAKNa/u8v601gCQONdFUED/vO3Hm3UrxbJ%2Bs9oGxPqAJSVANAURQPGjw72G%2BwLO55tSAOsPyUmADTLVfOnfeGGtBsQfP0XWX%2BaSQBoohga8Gu1NmDvsZfW9gZe//XWn2YSAJor%2BLOgL9bUgL3HXlrX2//QXutPmQkATffmeYk1wPqTCQGgFRJqgPUnHwJAi7x53rQv3bgsbAN%2B9a%2BHaUDw9V/cMXFDj/WnRQSA1nnTvPawDfjSg0M1IIb1X9/dOX289adFBICWiqQBr5z249afDAkArfamee1ffkvgBvzaTzag%2BIpP609uBIAA3jg3ogYU6/%2Bw9Sc/AkAYRQPaQjdgj/UnY6NCvfArH7k%2B1EsTj289u//dX9t%2B9MSPQh1gytjRBwdPhHr1xR0TN3R3dlh/KpVRH7uv9S/qDoCQ3ji3/UtB7wOsPzkTAAIL/iwoiMusPxHI66OOOL0hswZc1jFxvfUnArl8yBG5fBpg/YlH%2BT/eSEUODbD%2BRKXMH2wk5w1z2%2B8obwOsP7Ep50ca6bqypA2w/kSobB9mlMCVc9vvuGl5mRqwZLqv%2BSFG5fkYo0yunDO1NA1YMn3i%2BlWd06w/8SnDBxilVDRgwuhzQh%2BkLtafmAkA8bpyztQv37Qs3QZYfyInAEQt3QZYf%2BInAMTuyjlT70itAUunT7L%2BxE8ASMDrk2rA0umT1ndbfxIgAKQhlQYU698%2BbnTog8DwBIBkxN%2BAZTOsPykRAFLy%2BjlTv7Iy0gYsmzHprlXWn5QIAIl53eypX1m5bOKYuBpg/UmRAJCe182eesdNETXA%2BpMoASBJ8TTA%2BpMuASBVr5s99eNXLwp7hsljR9%2B5crn1J1ECQKp2Hxn86D88EfYMA4Mnfuc7T/zolbCngBoJAEnafWRwTW/fY/uPhj5I5a5Hnvv333xEA0iRAJCe548Mrt4cxfoXNnz/%2BX%2BnASTIs0sS89zh42t6%2B584EMv6FzZ%2B//nKK5WPX7PoVaNCHwWq5g6AlPzw8PHVm6Nb/8LGHzz/y994%2BOVX3AiQDAEgGcX6P3kwxvUvbPrB7g9//RENIBUCQBqePXR89eb%2BpyJe/8KfP7r7QxpAIgSABDxz6Pia3r7417/wvx/d/cH7PQsiAQJA7HYdOrZmc99TB4%2BFPsgI/J/HXvilv3j4hC8MIm4CQNR2HTq2ZnP/0wMprX9h8%2BMv/NL9GkDUBIB47Rw4tvr/9u9McP0LvY%2B/8IH7H9IAoiUAROrpgWNrNvfvOpTq%2Bhe2PP7iB/5CA4iUABCjpw4eW7O5L/X1L2x54sV/qwFESQCIzlMHj63p7Xvm0PHQB2mYrU%2B8%2BK/ve1ADiI0AEJenDh5d09v3bInWv/C1J/e8XwOIjAAQkScPHl29ub9861%2B458k97/t/D76kAURDAIjFEweOrt7c/8PD5Vz/wr1P7fnFe3doAJEQAKLw%2BIGjqzf3PVfq9S/c9/ReDSASAkB4jx84umZz3/NHBkMfpEXue3rvrffuGHz5R6EPQu4EgMAe2390dU7rX7j/6b3vvfdBDSAsASCkR/cfWdPbtzuz9S/cv3Pvrfc%2BeFwDCEcACOYH%2B4%2Bs7e0PuP6Xz5x8x1uWTRpzTqgDfH3n3lvv2aEBhCIAhPH9fUfWbg66/rMmf3XV8hULO%2B5ctXzy2GAN%2BMaufb%2BgAQQiAATwyL4ja3v7XjgabP2vmDX5qyuXTx47ulKpvHrWlDtXdhb/HMQ3d%2B17zz07jp3QAFpNAGi1R/YdWdfb9%2BLRl0Id4PTFP7UHQfzlrn3vvme7BtBiAkBLPbz38NrNIdf/Z86d8qcrz/DMp3giNCVcA/76mf0aQIsJAK3z8N7Da3v79xwLtv6vOcv6Fy6fGb4B7/za9qMaQKsIAC3y0N7Da3v794Zb/5%2BdPeVPVi4f%2Bmt%2BumZOvqu7c%2Bq4YA34m2f3v0sDaBUBoBUe3BN4/V87e%2Bqf3DTM%2Bhc6Z0y6a1XgBrzz7m1HTrwc6gDkQwBouh17Dq3b0r8v3Pq/bvbUr9y0bGLVX%2B%2B/fMak9as628M14Ns/PPDOu7drAM0mADTX9hcPresNuf6vnzP1KytHsP6FZTMm3RW0AX/7wwPv2Lr98EsaQBMJAE207cVD67b07z9%2BItQBrpwz9Y6blk0YXcuf81o2Y9KG7q5p48c0/FRV%2Bs5zB95xtwbQRAJAs/S/eOjmLf0HAq7/3PY7blpe2/oXlkyfuH5VZ0e4Bvzdcwfefve2QxpAcwgATdH3wsDNvSHX/w1z2%2B94y7K20fX%2BDl8yfeL67pAN%2BPvnDr59qwbQFAJA4z3wwsAtW7YdHAy2/m%2Bc2/7lRqx/4bKOiRu6O6eHa8A/PH/wbVu3DQxqAA0mADTYA7sDr/%2Bb5jVy/QuLOyauD9qAf9QAmkAAaKTv7R64Zeu2gXDrf9X8aV%2B6cdn4hq5/YXHHxA09XTPagjXgu7sPvnVrf8D3lvIRABom%2BEJdNX/aF29c2oz1LyyaNmFDd9fMtrFN%2BvWHFbyvlIwA0BjBn1FcM3/aF29cOu6c5v6WvnTahA09nQEbEPwJG2UiADRA8M9SXrug4/bmr3/hkvYJG3s6Z00I14DQn2OnNASAegX/OsUVCzpuv2FJa9a/cHH7hI3dXQEbEPyrbCkHAaAuwf%2Bk0oqFHbfdsGRsC9e/cFF728burnPDNaD4c3YB/5Q1JSAA1C749yq4bmHH7Tcsbf36Fy5qb9vYE7IB2zSA%2BggANQr%2B3cquX9hx2w1Lx7xqVKgDVCqVC6e2berpmj1xXKgDBP9eeyRNAKhF8O9XfMN50z8fev0LF0xt29TTGbABwb/bNukSAEbs26H/xpIbz5/%2BuZ9bEsP6F86f0vZnPZ1zwjUg%2BN%2B3Q6IEgJH51rOB/97at5w//XPXR7T%2BhfOmtG3q6Zw7KVgDHtp7eJ0GMEICwAh8K/TfWLvyghmfvX7J6MjWv3DelLaN3V3zgjZgbW//Hg2gagJAtf7qmX3v%2Btr2Y0HX/zPXXRbn%2BhfOmzJ%2BY0/IBjy89/C63v4Xj2oAVREAqvKXu/a9554dAdd/1YWxr39h4eTxm3q65k8aH%2BoAD%2B89vK63TwOohgAwvG%2BGXv/uC2d%2BekUC619YMHn8pp/vXDA5WAMe2XdkbW/fC0cHQx2AVAgAw/jGrn2/cM%2BO4y8HW/%2BeC2d%2BasXiVNa/MH/S%2BI09nQvDNeD7%2B46s3dy/%2B4gGMBQBYChf37k37Pr//EUzP3VdYutfmD9p/MaervOmBGvAD/YfWdurAQxFADir%2B3fuvfXeBwfDrf%2B/uHjWJ1csPmdUeutfmDdp3MbukA14dP%2BRNb19GsDZCABn9tTBo%2B8Nuv7/8uJZn7h2UbrrX5g7adymnq7zprSFOsBj%2B4%2B%2B554doV6dyAkAZ3belLZfvmJhqFf/VxfP%2BsP0178wZ%2BK4TT2d5wdqwKQx5/z2Gy4K8tLETwA4qw%2B/euGvvOb81r/u6ktm/eG1CT/5OV3RgAumtroBk8ac86crl//MuVNa/LqkQgAYSusbsObSc//nNYsT/KTvMGZPHLepp%2BvCFjbA%2BjMsAWAYrWzA2kvP/fjVi8q3/oVzJ4zd2NN1UXsrGmD9qYYAMLwPv3rhf/jZ85v9Kjcvmv0/yrv%2BhXMnjN3Y3fQGTB5r/amKAFCVD13R3Abcsmj2H1x1abnXvzBrwtiN3V0Xt09o0q9v/ameAFCt5jXgrYtn/8HVWax/YdaEsRu6Oy9pQgOK9X/1LOtPVQSAEWhGA96%2BeM5/v%2BrSbMb/x2ZNGLuhp/PSaY1sgPVnpASAkWlsA95x2ZyPXnVJbutfmNk2dkN316IGNcD6UwMBYMQa1YB3XDbn99%2Bc6foXZrSNWd/dtbhjYp2/jvWnNgJALepvwLuWzM18/Qsz2sas7%2B6spwHWn5oJADWqpwHvXjL39950sfUvTB8/ZkN352U1NcD6Uw8BoHa1NeA9S63/T%2BsYP2b9yBtg/amTAFCXkTbg1mXzfveNFzftOAnrGD9mQ3fnkunVNsD6Uz8BoF7VN%2BC9y%2Bb5zpRDmDZ%2BzPpVnUunTxr2Z1p/GkIAaIAPXbHwP772gqF/zvuWz/st6z%2BcaePHrO/uXDZjqAZMHnvOnSs7rT/1EwAa44OXLxiiAe9bPu83r7T%2BVWkfN/quVZ3Lz9KAYv2vmDW5xaeilASAhjlbA97fOd/6j0jRgM7TGmD9aSwBoJFOb8C/6Zz/G6%2B/MNR50jV13Oi7uju7Zv7z1lt/Gk4AaLBTG/CBrgW/bv1rNWXs6K%2BuWn75zMkV609zjA59AErog5cvqFQqA4MnfnW4zwwztKIB77/voV95zfnWn4YL9sdxXvnI9aFeGiA2oz52X%2Btf1CMggEwJAECmBAAgUwIAkCkBAMiUAABkSgAAMiUAAJkSAIBMCQBApgQAIFMCAJApAQDIlAAAZEoAADIlAACZEgCATAkAQKYEACBTAgCQKQEAyJQAAGRKAAAyJQAAmRIAgEwJAECmBAAgUwIAkCkBAMiUAABkSgAAMiUAAJkSAIBMCQBApgQAIFMCAJApAQDIlAAAZEoAADIlAACZEgCATAkAQKYEACBTAgCQKQEAyJQAAGRKAAAyJQAAmRIAgEwJAECmBAAgUwIAkKlgARj1sftCvTRAVELtoTsAgEwJAECmBAAgUwIAkCkBAMiUAABkKmQAfCUoQMAldAcAkCkBAMiUAABkSgAAMhU4AD4PDOQs7Aa6AwDIlAAAZEoAADIVPgA%2BDQDkKfj6hQ8AAEEIAECmBAAgU1EEIPiDMIAWi2H3oggAAK0nAACZiiUAMdwNAbRGJIsXSwAAaLGIAhBJEgGaKp6tiygAALSSAABkKq4AxHNnBNAMUa1cXAEAoGWiC0BUeQRooNj2LboAANAaMQYgtkgC1C/CZYsxAAC0QKQBiDCVADWLc9MiDQAAzRZvAOIMJsBIRbtm8QYAgKaKOgDRZhOgSjHvWNQBAKB5Yg9AzPEEGFrkCxZ7AABokgQCEHlCAc4o/u1KIACVFN5HgFMlsVppBACAhksmAEnkFKCSzl4lE4BKOu8pkLOEliqlAFSSemeBDKW1UYkFAIBGSS8AaQUWyEdy65ReACoJvstA6aW4S0kGoJLmew2UVaKLlGoAAKhTwgFINLlAyaS7RQkHoJLy%2Bw6UQ9IrlHYAKom/%2B0DSUt%2Bf5ANQSf8aACkqwfKUIQCVUlwJICHl2JySBKBSlusBxK80a1OeAFRKdFWAaJVpZ0oVgEq5rg0Qm5ItTNkCUCndFQIiUb5tKWEAKmW8TkBYpVyVcgagUtKrBQRR1j0pbQAq5b1mQCuVeEnKHIBKqa8c0ALl3pBRoQ/QIq985PrQRwBSUu7pL5T8DuCkHK4l0CiZLEYuAahkc0WBOuWzFbk8AjqVx0HAGeUz/YWM7gBOyu0aA9XIcBlyDEAlyysNDCHPTcjxEdCpPA6CzOU5/YVM7wBOyvnaA5kvQO53ACe5FYCsZD79BQH4CTIApWf6TxKAM5ABKCXT/1ME4KxkAErD9J%2BRAAxDBiBppn8IAlAVGYDkmP5hCcAIyAAkwfRXSQBqoQQQIbs/UgJQOxmASJj%2B2ghAAygBBGH36yQADSYG0FRGv4EEoInEABrC6DeJALSOHkCVLH5rCEBgqkDmbD0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA%2Bfx/KUevbEKxaaMAAAAASUVORK5CYII%3D%22%2C%20%22sizes%22%3A%20%22512x512%22%2C%20%22type%22%3A%20%22image/png%22%2C%20%22purpose%22%3A%20%22any%22%7D%5D%7D">
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAHv0lEQVR4nO3dW2wUdRTH8VNAHyQxMbHbUt9gd1vaB198UgSKvKmIZQEviHhDRTQxeAW8RfBKFVBMlPtFfVMUWmgp1SB4eQW6LVi224ZuDd3FKIkaLF0fRgvS7nb+c/5zO//f54kApUPOt/+ZnZ2dIQIAAAAAAAAAAAAAAAAAAACAACnxewMuyi+b6fcmhElJfYvfm0Dkb0AoRiO/evIhIHTjKo9L8jQgpOMZzzLyKCCk4wsPMnI9IKTjO1czGuPeP02oJxhcnYKLAaGe4HBvFq7swpBOYGnfnelfgVBPkGmfjuaAUE/w6Z2RzoBQT1honJS2gFBPuOial56AUE8YaZmau+eBQDwNAWH5CS/+7LgBoZ6wY06QFRDqkYEzRxwDAYvzgLD8SOJ4mliBgMVhQFh+5HE2U6xAwOIkICw/UjmYLFYgYEFAwKIcEPZfsqnOFysQsCAgYEFAwIKAgEUtIBxBm0BpyliBgAUBAQsCAhYEBCwICFgQELAgIGBBQMCCgIAFAQELAgIWBAQsCAhYEBCwICBgQUDAgoCABQEBCwICFgQELMID2tqWefn7U75864ZU9onWjoHBvC/f3TPj/N4AF21ry6w80klEeaLXb5zk5bduSGWXtLYPDOYHBvMbZlSNGxOghxvrJXYF2taWWXGk0/r1luO9L3m4DjV0/VsPEe1N9cteh2QGtD15sR6LZw01dGWXHGy/tBjZDQkMaHsys/xw5/Df96Ch4fVYBDckLaBC9Vi2HO9175i6sUA9FqkNiQpoRzKzonA9ls3uNNTYlX28cD0WkQ3JCWhnsm/54U47w9HekJ16LPIakhPQ+CvHlth+sayxoX1pu/VYxl8xdoz9DQ08OQHVRSPraqvsn3DR0tC+dPaxFoV65leWr5kal3RWSE5A5KihVxgNoR4SFhCpN7TJaUP70znUQ/ICIk8a2p/OPdqSRD0kMiAiqotG1k53qyHVeubFy6TWQ1IDIqI5MVcaclBP/bRKqfWQ4IDIUUOv/lCsoSbUM4zkgEi9oY3HCjbUlM4tRj3DCA+INDWEegqRHxARzYlF3p+uMM7LGmruRj0FGREQESViZc4aau7OLT6gUM9ck+oh2Ze0XiYRKyOip789YTOGjcd6e8791dpz9m+Vet4zqR4yKiBSb6gpnbP/jxtYD5mzCxuiui+zycx6yMCAyGpI67CNrYfMDIiIEnFtDSUMroeMDYg0NaQxxJAyNyBijx/1kOEBESMC1GMxPSAiSsTLHqy5TulL4tdchXosCIgO9pzdnswofcnJX/9Y9VPKpe0JF9MDauk5+1Bzm/1zzUM+Pnr6tR/RkNkBHejOPeyoHssnR08Xv37IBOYG1Nyde+RA0nE9liLXDxnC0ICs99iZ9VgMb8jEgJrSGtaeS208xvp8WagZF9B+xWsLbdrk5n0/gsysgPals0pXxd9QdrX9cz2bvb0PWkAYFFBjl9onkeuikS9mXV8/TeEjXVuO9648Msr9ZYQx5YIy+3dgsQxdij+/spyInjl00uaXbm3L5IlW3xR1vKnhYsQK1KBYTyJWdukHOeZXlitd5rytLWPzTkUCyA+oIVXsznPDJeIjXLI4T/GiH+tOeyY0JDygvan+oTvu2jG38HvsRf5oRDuSmRcP/yy+IckB7VG8n9yoy4zqJRw7k30vfCe8IbEB7Un1L1Wpx+aBzog7uCJ2tQtvSOarsK9P9S9t7biQd+X+PaqfDdrV3kdEb90cE3n5kMAV6CvFeu6qLFc62UPDXqaNald73/OHZK5D0gLa3XnmSZV67q4qXzMt7mBtmBOLrKutsn9j2E87+p47dFJeQ6IC2t155qlvTtiv556q8nenOqnHUheNrK2ttN/QZx2/PCuuITkBfalYz71VE95h1GOpi0bWqTT0ubiG5AR07vzAoO16Fkye8PZUPUe1d0Yj61Ua+v38wAXcqT6AFlZXrJ4StTPGBZMn6H1NNNt2Q7dOvPajGZMlPX9OTkBEdH91xeopo7yLeV+15noss6ORD2aMckwtrx4SFhAR3V9d8UbhhhZWV7w5xa3zMXdMKv2wcEMi6yF5AZG1Do10NYXVlqsDnFWgIan1kMiAiGhRzeUNeVCPZdak0g23/O8pu4LrIakBEdGimopV/zW0qKbYfk272yeWDj2pWXY9JPW9MMsDNRVElPrtT4+f+U1Et00sJaLGruz6WsnP/CYitf9bftlMl7YDAqWkvsXm3xS7CwNvICBgQUDAgoCABQEBCwICFgQELAgIWBAQsCAgYEFAwIKAgAUBAQsCAhYEBCwICFgQELAgIGBBQMCCgIAFAQELAgIWtYDsf9oDwktpyliBgAUBAQsCAhYEBCzKAeE4WjbV+WIFAhYEBCxOAsJeTCoHk8UKBCwOA8IiJI+zmWIFAhbnAWERksTxNLECAQsrICxCMnDmyF2B0FDYMSeoYReGhsKLPzscAwGLnoCwCIWRlqlpW4HQULjompfOXRgaCguNk9J8DISGgk/vjPQfRKOhINM+HRefRIRH+wSKSz/YLr6Mx1IUHO7Nwt3zQGgoCFydgkcP08PuzBce/AB7+jRGZOQZz9Z+Hx7niYxc5fFhg5/Pg0VJGvl1uBmgBwqjJyV4gQIAAAAAAAAAAAAAAAAAACDUP3/abdghjA3DAAAAAElFTkSuQmCC">
+<title>Математическое мышление</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap">
+<style>
+/* Layout: one narrow column. Menu with two level cards, then a play screen (timer bar, big problem, keypad), then a results list. */
+:root {
+  --bg: #000000;
+  --surface: #12151F;
+  --fg: #E7ECFA;
+  --muted: #9AA6C4;
+  --line: #262C40;
+  --track: #1F2538;
+  --accent: #FF7344;
+  --accent-fg: #1A0D06;
+  --good: #4CC58A;
+  --bad: #FF7A7A;
+  --font-display: 'Unbounded', 'Onest', system-ui, sans-serif;
+  --font-body: 'Onest', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+button, .key, .choice, .level { -webkit-tap-highlight-color: transparent; touch-action: manipulation; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+html, body { overscroll-behavior: none; }
+body { min-height: 100vh; min-height: 100dvh; overscroll-behavior-y: none; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.45;
+  padding-top: max(20px, env(safe-area-inset-top, 0px));
+  padding-bottom: max(28px, env(safe-area-inset-bottom, 0px));
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.app { max-width: 440px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+h1, h2 { font-family: var(--font-display); font-weight: 700; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: clamp(22px, 6.4vw, 28px); line-height: 1.15; overflow-wrap: anywhere; }
+h2 { font-size: 22px; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.lead { margin-top: 10px; font-size: 17px; line-height: 1.5; font-weight: 500; }
+button { font: inherit; color: inherit; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* menu */
+.levels { display: flex; flex-direction: column; gap: 12px; }
+.level {
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; text-align: left;
+  background: var(--surface); border: 1.5px solid var(--line); border-radius: 14px; padding: 16px;
+}
+.level:hover { border-color: var(--accent); }
+.level .tag { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.level .name { font-weight: 600; font-size: 18px; grid-column: 1; }
+.level .rule { color: var(--muted); font-size: 14px; grid-column: 1; }
+.level .sample { grid-column: 2; grid-row: 1 / span 3; font-family: var(--font-display); font-weight: 500; font-size: 18px; color: var(--accent); white-space: nowrap; }
+.level .best { grid-column: 1 / -1; font-size: 13px; color: var(--muted); margin-top: 6px; padding-top: 8px; border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+
+/* play */
+.top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-variant-numeric: tabular-nums; }
+.top .count { font-weight: 600; }
+.top .time { font-family: var(--font-display); font-weight: 700; font-size: 22px; min-width: 4ch; text-align: right; }
+.top .time.low { color: var(--bad); }
+.track { height: 10px; border-radius: 6px; background: var(--track); overflow: hidden; }
+.bar { height: 100%; background: var(--accent); transform-origin: left center; transform: scaleX(1); border-radius: 6px; }
+.bar.low { background: var(--bad); }
+.dots { display: grid; grid-template-columns: repeat(10, 1fr); gap: 5px; }
+.dot { height: 6px; border-radius: 3px; background: var(--track); }
+.dot.ok { background: var(--good); }
+.dot.no { background: var(--bad); }
+.dot.now { background: var(--fg); }
+.card { background: var(--surface); border: 1.5px solid var(--line); border-radius: 16px; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.problem { font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 9vw, 44px); line-height: 1.1; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.problem.story { font-family: var(--font-body); font-weight: 600; font-size: 20px; line-height: 1.4; white-space: normal; text-align: center; text-wrap: balance; }
+.sub { color: var(--muted); font-weight: 600; text-align: center; text-wrap: balance; }
+.problem.expr { font-size: clamp(22px, 6.2vw, 30px); line-height: 1.3; white-space: normal; text-align: center; text-wrap: balance; }
+.problem.alg { font-size: 26px; line-height: 1.45; white-space: pre-line; text-align: center; }
+.list .q { min-width: 0; }
+.answer {
+  min-width: 6ch; text-align: center; font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.3;
+  border-bottom: 3px solid var(--accent); padding: 0 12px; min-height: 1.3em; font-variant-numeric: tabular-nums;
+}
+.answer.ok { color: var(--good); border-color: var(--good); }
+.answer.no { color: var(--bad); border-color: var(--bad); }
+.status { min-height: 1.45em; font-weight: 600; text-align: center; }
+.status.ok { color: var(--good); }
+.status.no { color: var(--bad); }
+.pad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.key {
+  height: 60px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface);
+  font-family: var(--font-display); font-weight: 500; font-size: 22px;
+}
+.key:active { background: var(--track); }
+.key.fn { font-family: var(--font-body); font-weight: 600; font-size: 16px; color: var(--muted); }
+.key.go { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); font-family: var(--font-body); font-weight: 600; font-size: 18px; }
+.key.go:active { filter: brightness(0.92); }
+
+.walletrow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 12px; }
+.walletrow .wallet { margin-top: 0; }
+.shopbtn { padding: 6px 16px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface); font-weight: 600; }
+.shopbtn.hc.on { border-color: #FF3B3B; color: #FF5252; box-shadow: 0 0 14px rgba(255, 59, 59, 0.55); }
+.shopbtn.admin { border-color: #35F27A; color: #35F27A; animation: adminglow 2s ease-in-out infinite; }
+.adminbox { border: 1.5px solid #35F27A; border-radius: 14px; background: var(--surface); padding: 14px; display: flex; flex-direction: column; gap: 12px; animation: adminglow 2s ease-in-out infinite; }
+.admintitle { color: #35F27A; text-shadow: 0 0 14px rgba(53, 242, 122, 0.6); }
+.adminbox .btn { border-color: #35F27A; }
+.row3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.setrow { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: end; }
+.abal { font-weight: 600; }
+.abal b { font-family: var(--font-display); color: #35F27A; font-variant-numeric: tabular-nums; }
+@keyframes adminglow {
+  0%, 100% { box-shadow: 0 0 8px rgba(53, 242, 122, 0.35), 0 0 22px rgba(53, 242, 122, 0.14); }
+  50% { box-shadow: 0 0 16px rgba(53, 242, 122, 0.75), 0 0 38px rgba(53, 242, 122, 0.3); }
+}
+.tdots { display: flex; gap: 6px; }
+.tdot { flex: 1; height: 6px; border-radius: 3px; background: var(--track); }
+.tdot.on { background: var(--accent); }
+#ttext { font-size: 17px; line-height: 1.5; }
+.item { background: var(--surface); border: 1.5px solid var(--accent); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.itemhead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.itemname { font-family: var(--font-display); font-weight: 700; font-size: 20px; }
+.price { font-family: var(--font-display); font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+.hintbtn { height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--accent); background: var(--surface); color: var(--accent); font-weight: 600; box-shadow: 0 0 12px rgba(255, 115, 68, 0.35); }
+.hintbtn:active { background: var(--track); }
+.status.hint { color: var(--accent); }
+.btn:disabled { opacity: 0.55; cursor: default; }
+.closed { font-family: var(--font-display); font-weight: 700; font-size: 34px; color: var(--muted); letter-spacing: 0.02em; padding: 12px 0 4px; }
+.group { border: 1.5px solid var(--line); border-radius: 14px; background: var(--surface); padding: 12px 14px 14px; margin: 0; min-width: 0; }
+.group legend { padding: 0 6px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.opts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.opts.three { grid-template-columns: 1fr; }
+.chk { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 8px 10px; border: 1.5px solid var(--line); border-radius: 12px; background: var(--bg); font-weight: 600; font-size: 18px; cursor: pointer; }
+.opts.three .chk { justify-content: flex-start; font-size: 16px; }
+.chk input { width: 20px; height: 20px; accent-color: var(--accent); margin: 0; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.field { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 14px; color: var(--muted); }
+.field input { height: 48px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface); color: var(--fg); font: inherit; font-size: 18px; font-weight: 600; padding: 0 12px; width: 100%; min-width: 0; }
+.field input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.bmsg { min-height: 1.45em; font-weight: 600; color: var(--bad); }
+.level.locked { border-style: dashed; }
+.level.locked .sample, .level.locked .name { color: var(--muted); }
+.wallet { display: inline-flex; align-items: baseline; gap: 8px; margin-top: 12px; padding: 6px 14px; border-radius: 999px; background: var(--surface); border: 1.5px solid var(--line); font-weight: 600; font-variant-numeric: tabular-nums; }
+.wallet b { font-family: var(--font-display); font-weight: 700; color: var(--accent); }
+.top .coins { font-weight: 600; color: var(--accent); }
+.coinline { font-weight: 600; font-variant-numeric: tabular-nums; }
+.choices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.choice {
+  height: 76px; border-radius: 14px; border: 1.5px solid var(--line); background: var(--surface);
+  font-family: var(--font-display); font-weight: 700; font-size: 24px; font-variant-numeric: tabular-nums;
+}
+.choice:active { background: var(--track); }
+.choice.right { background: var(--good); border-color: var(--good); color: var(--bg); }
+.choice.wrong { background: var(--bad); border-color: var(--bad); color: var(--bg); }
+
+/* results */
+.score { display: flex; align-items: baseline; gap: 10px; }
+.score .big { font-family: var(--font-display); font-weight: 700; font-size: 56px; line-height: 1; font-variant-numeric: tabular-nums; }
+.score .of { color: var(--muted); font-size: 18px; }
+.list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; background: var(--surface); border: 1.5px solid var(--line); border-radius: 14px; overflow: hidden; }
+.list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 14px; font-variant-numeric: tabular-nums; border-top: 1px solid var(--line); }
+.list li:first-child { border-top: 0; }
+.list .q { font-weight: 600; }
+.list .res.ok { color: var(--good); }
+.list .res.no { color: var(--bad); text-align: right; }
+.actions { display: flex; flex-direction: column; gap: 10px; }
+.btn { height: 52px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface); font-weight: 600; font-size: 16px; padding: 0 16px; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+/* background cycle: black, red, green, orange, light blue, back to black. Deep shades keep white text readable. */
+@property --bg { syntax: '<color>'; inherits: true; initial-value: #000000; }
+@property --surface { syntax: '<color>'; inherits: true; initial-value: #12151F; }
+@property --line { syntax: '<color>'; inherits: true; initial-value: #262C40; }
+@property --track { syntax: '<color>'; inherits: true; initial-value: #1F2538; }
+:root { animation: bgcycle 15s linear infinite; }
+@keyframes bgcycle {
+  0%        { --bg: #000000; --surface: #12151F; --line: #262C40; --track: #1F2538; }
+  20%       { --bg: #4A0709; --surface: #6A0F12; --line: #962127; --track: #55090C; }
+  40%       { --bg: #06361B; --surface: #0B4F29; --line: #1C7A47; --track: #08431F; }
+  60%       { --bg: #5A2706; --surface: #7A3A0C; --line: #B0601E; --track: #66300A; }
+  80%       { --bg: #0B4A6E; --surface: #11628F; --line: #2A8DBF; --track: #0D5580; }
+  100%      { --bg: #000000; --surface: #12151F; --line: #262C40; --track: #1F2538; }
+}
+#splash {
+  position: fixed; inset: 0; z-index: 20; background: #B3121B; color: #FFFFFF;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center;
+  padding-block: 24px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+#splash.green { background: #0E7A3F; }
+#splash.blue { background: #0B6A9E; }
+#splash.purple { background: #5B2BA0; }
+#splash.orange { background: #B8560E; }
+#splash.teal { background: #0D766E; }
+#splash.pink { background: #A3205E; }
+#splash.indigo { background: #2C3E9E; }
+#splash.gold { background: #8A6A0A; }
+#splash.slate { background: #34495E; }
+#splash.red { background: #B3121B; color: #FFFFFF; }
+#splash.dark { background: #000000; color: var(--fg); }
+#splash.dark .sx { color: var(--accent); }
+#splash .sn { font-family: var(--font-display); font-weight: 700; font-size: clamp(34px, 11vw, 56px); line-height: 1.1; }
+#splash .st { font-size: 20px; font-weight: 600; opacity: 0.9; }
+#splash .sx { font-family: var(--font-display); font-weight: 500; font-size: 28px; margin-top: 8px; }
+#lv12 {
+  border-style: solid;
+  border-color: #FF3B3B;
+  box-shadow: 0 0 12px rgba(255, 59, 59, 0.5), 0 0 32px rgba(255, 59, 59, 0.22);
+  animation: redglow 2.2s ease-in-out infinite;
+}
+#lv12 .name, #lv12 .sample { color: #FF5252; }
+@keyframes redglow {
+  0%, 100% { box-shadow: 0 0 10px rgba(255, 59, 59, 0.35), 0 0 26px rgba(255, 59, 59, 0.15); }
+  50% { box-shadow: 0 0 20px rgba(255, 59, 59, 0.8), 0 0 46px rgba(255, 59, 59, 0.34); }
+}
+#lv8 {
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(255, 115, 68, 0.5), 0 0 32px rgba(255, 115, 68, 0.22);
+  animation: glow 2.4s ease-in-out infinite;
+}
+#lv8 .name, #lv8 .sample { color: var(--accent); }
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(255, 115, 68, 0.35), 0 0 26px rgba(255, 115, 68, 0.15); }
+  50% { box-shadow: 0 0 20px rgba(255, 115, 68, 0.75), 0 0 46px rgba(255, 115, 68, 0.32); }
+}
+#lv13 {
+  border-style: solid;
+  border-color: #35F27A;
+  box-shadow: 0 0 12px rgba(53, 242, 122, 0.5), 0 0 32px rgba(53, 242, 122, 0.22);
+  animation: greenglow 2.2s ease-in-out infinite;
+}
+#lv13 .name, #lv13 .sample { color: #35F27A; }
+@keyframes greenglow {
+  0%, 100% { box-shadow: 0 0 10px rgba(53, 242, 122, 0.35), 0 0 26px rgba(53, 242, 122, 0.15); }
+  50% { box-shadow: 0 0 20px rgba(53, 242, 122, 0.8), 0 0 46px rgba(53, 242, 122, 0.34); }
+}
+#lvDuel {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    linear-gradient(90deg, #FF3B3B 50%, #3B8BFF 50%) border-box;
+  box-shadow: -8px 0 16px rgba(255, 59, 59, 0.45), 8px 0 16px rgba(59, 139, 255, 0.45);
+  animation: duelglow 2.2s ease-in-out infinite;
+}
+#lvDuel .name { background: linear-gradient(90deg, #FF5252 50%, #5AA0FF 50%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; }
+#lvDuel .sample { color: #5AA0FF; }
+@keyframes duelglow {
+  0%, 100% { box-shadow: -6px 0 14px rgba(255, 59, 59, 0.3), 6px 0 14px rgba(59, 139, 255, 0.3); }
+  50% { box-shadow: -12px 0 26px rgba(255, 59, 59, 0.75), 12px 0 26px rgba(59, 139, 255, 0.75); }
+}
+.exgrid { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px; }
+.ex { padding: 8px 12px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--bg); font-family: var(--font-display); font-weight: 500; font-size: 15px; line-height: 1.3; font-variant-numeric: tabular-nums; }
+.ex.wide { font-family: var(--font-body); font-weight: 600; font-size: 15px; }
+.cuptable { list-style: none; margin: 0 0 12px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.cuptable li { display: flex; justify-content: space-between; padding: 10px 14px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface); font-variant-numeric: tabular-nums; }
+.cuptable b { color: #E8B923; font-family: var(--font-display); }
+.leaguebox { padding: 14px; border-radius: 14px; border: 1.5px solid var(--line); background: var(--surface); margin-bottom: 12px; display: flex; flex-direction: column; gap: 10px; }
+.leaguehead { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.leaguename { font-family: var(--font-display); font-weight: 600; font-size: 22px; }
+.leaguebar { height: 12px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.leaguebar div { height: 100%; width: 0; border-radius: 999px; transition: width 0.4s ease; }
+.cuptable li.reached { border-color: var(--accent); }
+.subh { margin: 8px 0 0; font-size: 17px; font-family: var(--font-display); }
+.collgrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 12px; }
+.collcell { position: relative; aspect-ratio: 1; display: grid; place-items: center; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface); font-family: var(--font-display); font-weight: 600; font-size: 28px; color: var(--muted); opacity: 0.55; }
+.collcell.got { opacity: 1; color: var(--accent); border-color: var(--accent); box-shadow: 0 0 12px rgba(255, 115, 68, 0.35); }
+.collcell i { position: absolute; right: 5px; bottom: 2px; font-style: normal; font-size: 11px; font-weight: 700; color: var(--fg); font-family: var(--font-body); }
+.boxres { display: flex; gap: 8px; flex-wrap: wrap; }
+.boxres span { min-width: 48px; height: 48px; padding: 0 8px; display: grid; place-items: center; border-radius: 12px; border: 1.5px solid var(--accent); color: var(--accent); font-family: var(--font-display); font-weight: 600; font-size: 24px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<main class="app">
+  <section id="menu" class="app" style="gap:16px">
+    <div>
+      <h1>Математическое мышление</h1>
+      <div class="language-box">
+        <label for="languageSelect">Выбери язык / Choose a language / Тілді таңда</label>
+        <select id="languageSelect" aria-label="Choose language">
+          <option value="en">English language</option>
+          <option value="ru">Русский язык</option>
+          <option value="kk">Қазақ тілі</option>
+        </select>
+      </div>
+      <p class="lead">Это игра «Математическое мышление». В ней нужно считать, решать, создавать и открывать новые возможности.</p>
+      <p class="muted" style="margin-top:8px">Решай примеры в уме и вводи ответ. Не успел за отведённое время, пример засчитывается как ошибка. За каждый правильный ответ ты получаешь 100 монет.</p>
+      <div class="walletrow">
+        <div class="wallet">Монеты <b id="wallet">0</b></div>
+        <div class="wallet">Кудрики <b id="kudWallet">0</b></div>
+        <span class="wallet" id="artChip" hidden>Артефакт <b>подсказка</b></span>
+        <button class="shopbtn" id="openShop" type="button">Магазин</button>
+        <button class="shopbtn" id="openTut" type="button">Туториал</button>
+        <button class="shopbtn" id="openTasks" type="button">Задания</button>
+        <button class="shopbtn" id="openExamples" type="button">Все примеры</button>
+        <button class="shopbtn" id="openLeaders" type="button">🏆 Лидеры</button>
+        <button class="shopbtn" id="openCups" type="button">Кубки</button>
+        <button class="shopbtn" id="openColl" type="button">Коллекция</button>
+        <button class="shopbtn" id="openAcc" type="button">Аккаунт</button>
+        <button class="shopbtn hc" id="hcToggle" type="button" hidden>Хардкор: выкл</button>
+        <button class="shopbtn admin" id="openAdmin" type="button">Админ панель</button>
+      </div>
+    </div>
+    <div class="levels">
+      <button class="level" id="lv1" type="button">
+        <span class="tag">Уровень 1</span>
+        <span class="name">Таблица умножения</span>
+        <span class="rule">10 примеров, 11 секунд на каждый</span>
+        <span class="sample">2 × 3</span>
+        <span class="best" id="best1">Лучший результат: пока нет</span>
+      </button>
+      <button class="level" id="lv2" type="button">
+        <span class="tag">Уровень 2</span>
+        <span class="name">Найди ошибку</span>
+        <span class="rule">10 примеров, 14 секунд. Пример решён неверно, выбери правильный ответ из трёх</span>
+        <span class="sample">14 × 6</span>
+        <span class="best" id="best2">Лучший результат: пока нет</span>
+      </button>
+      <button class="level" id="lv3" type="button">
+        <span class="tag">Уровень 3</span>
+        <span class="name">3 варианта</span>
+        <span class="rule">10 примеров, 16 секунд, выбери верный ответ из трёх. Деление, трёхзначные числа, большие произведения</span>
+        <span class="sample">84 ÷ 7</span>
+        <span class="best" id="best3">Лучший результат: пока нет</span>
+      </button>
+      <button class="level locked" id="lv4" type="button">
+        <span class="tag">Уровень 4</span>
+        <span class="name">6 вариантов</span>
+        <span class="rule">10 примеров, 19 секунд, выбери верный ответ из шести. Квадраты, умножение двузначных, деление</span>
+        <span class="sample">17²</span>
+        <span class="best" id="best4">Закрыт</span>
+      </button>
+      <button class="level" id="lv5" type="button">
+        <span class="tag">Уровень 5</span>
+        <span class="name">1, 2 и 3</span>
+        <span class="rule">10 примеров вперемешку из уровней 1, 2 и 3. Время и способ ответа у каждого примера, как на его уровне</span>
+        <span class="sample">× + ÷</span>
+        <span class="best" id="best5">Лучший результат: пока нет</span>
+      </button>
+      <button class="level locked" id="lv6" type="button">
+        <span class="tag">Уровень 6</span>
+        <span class="name">Задачи</span>
+        <span class="rule">10 задач, 24 секунды на каждую. Прочитай условие и впиши ответ</span>
+        <span class="sample">на 3 меньше</span>
+        <span class="best" id="best6">Лучший результат: пока нет</span>
+      </button>
+      <button class="level locked" id="lv7" type="button">
+        <span class="tag">Уровень 7</span>
+        <span class="name">Алгебра</span>
+        <span class="rule">10 заданий, 29 секунд на каждое. Найди неизвестное: x, y, c или a</span>
+        <span class="sample">2x + 5 = 17</span>
+        <span class="best" id="best7">Лучший результат: пока нет</span>
+      </button>
+      <button class="level locked" id="lv9" type="button">
+        <span class="tag">Уровень 8</span>
+        <span class="name">Квадраты</span>
+        <span class="rule">10 примеров, 14 секунд на каждый. Возведи число в квадрат и впиши ответ</span>
+        <span class="sample">7²</span>
+        <span class="best" id="best9">Лучший результат: пока нет</span>
+      </button>
+      <button class="level locked" id="lv10" type="button">
+        <span class="tag">Уровень 9</span>
+        <span class="name">Кубы</span>
+        <span class="rule">10 примеров, 19 секунд на каждый. Возведи число в куб и впиши ответ</span>
+        <span class="sample">6³</span>
+        <span class="best" id="best10">Закрыт</span>
+      </button>
+      <button class="level locked" id="lv11" type="button">
+        <span class="tag">Уровень 10</span>
+        <span class="name">Длинные примеры</span>
+        <span class="rule">10 примеров, 24 секунды на каждый. Несколько действий и скобки, впиши ответ</span>
+        <span class="sample">(12×3)+78</span>
+        <span class="best" id="best11">Закрыт</span>
+      </button>
+      <button class="level locked" id="lv14" type="button">
+        <span class="tag">Уровень 11</span>
+        <span class="name">Отрицательные числа</span>
+        <span class="rule">10 примеров, 24 секунды на каждый. Ответы бывают отрицательными, для минуса есть отдельная кнопка</span>
+        <span class="sample">12 − 45</span>
+        <span class="best" id="best14">Закрыт</span>
+      </button>
+      <button class="level locked" id="lv16" type="button">
+        <span class="tag">Уровень 12</span>
+        <span class="name">Более длинные примеры</span>
+        <span class="rule">10 примеров, 24 секунды на каждый. Скобки и несколько действий; помощник показывает следующий шаг</span>
+        <span class="sample">(8×3+7)−7</span>
+        <span class="best" id="best16">Закрыт</span>
+      </button>
+      <button class="level locked" id="lv17" type="button">
+        <span class="tag">Уровень 13</span>
+        <span class="name">Общие знания</span>
+        <span class="rule">10 вопросов, 24 секунды на каждый. Геометрия, время и простые факты</span>
+        <span class="sample">Сколько минут в 3 часах?</span>
+        <span class="best" id="best17">Закрыт</span>
+      </button>
+      <button class="level locked" id="lv19" type="button">
+        <span class="tag">Уровень 14</span>
+        <span class="name">Периметр</span>
+        <span class="rule">10 задач, 24 секунды на каждую. Найди периметр прямоугольника: ширина × 2 + длина × 2</span>
+        <span class="sample">5 × 2 + 8 × 2</span>
+        <span class="best" id="best19">Закрыт</span>
+      </button>
+      <button class="level locked" id="lv18" type="button">
+        <span class="tag">Уровень 15</span>
+        <span class="name">Ауданы тап</span>
+        <span class="rule">10 задач, 24 секунды на каждую. Найди площадь S: длина умножить на ширину</span>
+        <span class="sample">S = 6 × 4</span>
+        <span class="best" id="best18">Закрыт</span>
+      </button>
+      <button class="level locked" id="lv20" type="button">
+        <span class="tag">Уровень 16</span>
+        <span class="name">Часы</span>
+        <span class="rule">10 задач, 24 секунды на каждую. Перемотай время вперёд и впиши ответ в целых минутах</span>
+        <span class="sample">12 + 2,4 = 14</span>
+        <span class="best" id="best20">Закрыт</span>
+      </button>
+      <button class="level" id="lv21" type="button">
+        <span class="tag">Уровень 17</span>
+        <span class="name">Алгебра N2</span>
+        <span class="rule">10 заданий, 29 секунд на каждое. Уравнения, периметр, площадь и степени</span>
+        <span class="sample">x − 64 = 64</span>
+        <span class="best" id="best21">Лучший результат: пока нет</span>
+      </button>
+      <button class="level" id="lv22" type="button">
+        <span class="tag">Уровень 18</span>
+        <span class="name">1 2 3 ... 17</span>
+        <span class="rule">34 вопроса, 15 секунд на каждый. Примеры из всех уровней вперемешку</span>
+        <span class="sample">1 + 2 + 3 + ... + 17</span>
+        <span class="best" id="best22">Лучший результат: пока нет</span>
+      </button>
+      <button class="level locked" id="lv23" type="button">
+        <span class="tag">Челлендж</span>
+        <span class="name">100 примеров</span>
+        <span class="rule">100 примеров, 20 секунд на каждый. Сначала лёгкие, потом всё сложнее</span>
+        <span class="sample">1 → 100</span>
+        <span class="best" id="best23">Закрыт</span>
+      </button>
+      <button class="level" id="lvDuel" type="button">
+        <span class="tag">Соревнование</span>
+        <span class="name">Дуэль</span>
+        <span class="rule">Два игрока на одном телефоне по очереди решают одинаковые 10 примеров. Побеждает тот, кто решил больше, а при равенстве тот, кто быстрее</span>
+        <span class="sample">VS</span>
+        <span class="best">Монеты не начисляются</span>
+      </button>
+      <button class="level locked" id="lv13" type="button">
+        <span class="tag">Режим</span>
+        <span class="name">Лёгкий</span>
+        <span class="rule">10 примеров, 19 секунд на каждый. Только сложение и вычитание, числа от 1 до 99. За верный ответ 50 монет</span>
+        <span class="sample">47 + 28</span>
+        <span class="best" id="best13">Закрыт</span>
+      </button>
+      <button class="level locked" id="lv12" type="button">
+        <span class="tag">Режим</span>
+        <span class="name">Бесконечный</span>
+        <span class="rule">Примеры идут без конца, и с каждым верным ответом становятся сложнее. Сделаешь 10 ошибок, и игра окончена</span>
+        <span class="sample">∞</span>
+        <span class="best" id="best12">Закрыт</span>
+      </button>
+      <button class="level locked" id="lv8" type="button">
+        <span class="tag">Свой уровень</span>
+        <span class="name">Конструктор</span>
+        <span class="rule">Сам выбери действия, числа, время и тип ответа. На таком уровне монеты не начисляются</span>
+        <span class="sample">+ − × ÷</span>
+        <span class="best" id="best8">Закрыт</span>
+      </button>
+    </div>
+    <button class="btn" id="resetAll" type="button">Сбросить весь прогресс</button>
+  </section>
+
+  <section id="duelSetup" class="app" hidden>
+    <h2>Дуэль</h2>
+    <p class="muted">Два игрока по очереди решают одни и те же 10 примеров на этом телефоне. Побеждает тот, кто решил больше. Если поровну, побеждает тот, кто ответил быстрее. Купленные помощники в дуэли не работают, чтобы всё было честно.</p>
+    <div class="row2">
+      <label class="field" for="dn1">Игрок 1
+        <input id="dn1" type="text" maxlength="12" value="Игрок 1">
+      </label>
+      <label class="field" for="dn2">Игрок 2
+        <input id="dn2" type="text" maxlength="12" value="Игрок 2">
+      </label>
+    </div>
+    <fieldset class="group">
+      <legend>Сложность</legend>
+      <div class="opts three">
+        <label class="chk"><input type="radio" name="dp" id="dpEasy" value="easy"> Лёгкая: сложение и вычитание, 15 секунд</label>
+        <label class="chk"><input type="radio" name="dp" id="dpMid" value="mid" checked> Средняя: таблица умножения, 7 секунд</label>
+        <label class="chk"><input type="radio" name="dp" id="dpHard" value="hard"> Сложная: квадраты, 10 секунд</label>
+      </div>
+    </fieldset>
+    <div class="item">
+      <h2>🌐 Онлайн-дуэль</h2>
+      <p class="muted">Оба игрока должны открыть игру с интернетом. Создай комнату и отправь другу код. Работает через PeerJS.</p>
+      <label class="field">Твоё имя <input id="onlineName" maxlength="16" value="Игрок"></label>
+      <label class="field">Код комнаты <input id="onlineRoom" maxlength="40" placeholder="Код от друга (для подключения)"></label>
+      <div class="actions">
+        <button class="btn primary" id="onlineHost" type="button">Создать комнату</button>
+        <button class="btn" id="onlineJoin" type="button">Подключиться по коду</button>
+      </div>
+      <p id="onlineStatus" class="muted" aria-live="polite">Не подключено</p>
+      <div id="onlineGame" hidden>
+        <p id="onlineQuestion" class="problem expr">Ожидание соперника…</p>
+        <input id="onlineAnswer" type="number" inputmode="numeric" placeholder="Твой ответ" class="field" style="height:48px;padding:10px">
+        <button class="btn primary" id="onlineSubmit" type="button">Ответить</button>
+        <p id="onlineScore" class="muted"></p>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="dStart" type="button">Начать дуэль на одном телефоне</button>
+      <button class="btn" id="dBack" type="button">Назад</button>
+    </div>
+  </section>
+
+  <section id="duelHand" class="app" hidden>
+    <h2 id="dhTitle"></h2>
+    <p id="dhText" style="font-size:17px; line-height:1.5"></p>
+    <button class="btn primary" id="dhGo" type="button">Я готов</button>
+  </section>
+
+  <section id="duelRes" class="app" hidden>
+    <h2 id="drTitle"></h2>
+    <ul class="list" id="drList"></ul>
+    <p class="muted" id="drNote"></p>
+    <div class="actions">
+      <button class="btn primary" id="drAgain" type="button">Реванш</button>
+      <button class="btn" id="drMenu" type="button">В меню</button>
+    </div>
+  </section>
+
+  <section id="examples" class="app" hidden>
+    <h2>Все примеры</h2>
+    <p class="muted">Все примеры, которые встречаются в игре. Всего: 59.</p>
+    <fieldset class="group"><legend>Сложение · 5</legend><div class="exgrid"><span class="ex">1 + 1</span><span class="ex">2 + 3</span><span class="ex">4 + 4</span><span class="ex">7 + 7</span><span class="ex">5 + 5 = ?</span></div></fieldset>
+    <fieldset class="group"><legend>Вычитание · 6</legend><div class="exgrid"><span class="ex">5 − 7</span><span class="ex">234 − 123</span><span class="ex">345 − 269</span><span class="ex">123 − 456</span><span class="ex">123 − 689</span><span class="ex">123 − 234</span></div></fieldset>
+    <fieldset class="group"><legend>Умножение · 9</legend><div class="exgrid"><span class="ex">2 × 3</span><span class="ex">4 × 4</span><span class="ex">5 × 5</span><span class="ex">5 × 9</span><span class="ex">6 × 6</span><span class="ex">8 × 5</span><span class="ex">7 × 9</span><span class="ex">9 × 9</span><span class="ex">3 × 4</span></div></fieldset>
+    <fieldset class="group"><legend>Деление · 8</legend><div class="exgrid"><span class="ex">12 ÷ 3</span><span class="ex">12 ÷ 4</span><span class="ex">35 ÷ 7</span><span class="ex">81 ÷ 9</span><span class="ex">600 ÷ 10</span><span class="ex">24 ÷ 8</span><span class="ex">36 ÷ 6</span><span class="ex">27 ÷ 3</span></div></fieldset>
+    <fieldset class="group"><legend>Квадраты · 10</legend><div class="exgrid"><span class="ex">12²</span><span class="ex">10²</span><span class="ex">5²</span><span class="ex">7²</span><span class="ex">2²</span><span class="ex">6²</span><span class="ex">8²</span><span class="ex">9²</span><span class="ex">20²</span><span class="ex">3²</span></div></fieldset>
+    <fieldset class="group"><legend>Длинные примеры · 12</legend><div class="exgrid"><span class="ex">(12 + 44) − 78</span><span class="ex">(34 + 78) − 6</span><span class="ex">(569 − 568) − 7</span><span class="ex">(98 − 61) − 34</span><span class="ex">(89 − 7) + 8</span><span class="ex">(456 + 7) − 6</span><span class="ex">(3 × 4 + 7) − 7</span><span class="ex">(21 ÷ 3 + 7) − 7</span><span class="ex wide">(3 × 4 + 68) − 23</span><span class="ex wide">(72 ÷ 8 + 78) − 68</span><span class="ex wide">(78 − 6 ÷ 8 + 8) − 3</span><span class="ex wide">(44 − 4 ÷ 4 − 4) + 6</span></div></fieldset>
+    <fieldset class="group"><legend>Общие знания · 9</legend><div class="exgrid"><span class="ex wide">Сколько углов у треугольника?</span><span class="ex wide">Сколько углов у квадрата?</span><span class="ex wide">Сколько углов у пятиугольника?</span><span class="ex wide">Сколько углов у круга?</span><span class="ex wide">Сколько углов у шестиугольника?</span><span class="ex wide">Сколько сантиметров в 1 метре?</span><span class="ex wide">Сколько минут в 2 часах?</span><span class="ex wide">Сколько секунд в одном часе?</span><span class="ex">Одна на два</span></div></fieldset>
+    <button class="btn" id="examplesBack" type="button">Назад</button>
+  </section>
+
+  <section id="account" class="app" hidden>
+    <h2>Аккаунт</h2>
+    <p class="abal">Сейчас: <b id="accNow">Гость</b></p>
+    <p class="muted">Аккаунт хранит монеты, кудрики, кубки и открытые уровни отдельно. Данные лежат в этом браузере на этом телефоне. На другое устройство они не переносятся.</p>
+    <div class="item" id="accForm">
+      <label class="field" for="accName">Имя
+        <input id="accName" type="text" maxlength="20" autocomplete="username" autocapitalize="off" spellcheck="false">
+      </label>
+      <label class="field" for="accPass">Пароль
+        <input id="accPass" type="password" maxlength="40" autocomplete="current-password">
+      </label>
+      <div class="row2">
+        <button class="btn primary" id="accLogin" type="button">Войти</button>
+        <button class="btn" id="accCreate" type="button">Создать аккаунт</button>
+      </div>
+    </div>
+    <p class="muted" id="accMsg"></p>
+    <button class="btn" id="accLogout" type="button" hidden>Выйти из аккаунта</button>
+    <button class="btn" id="accBack" type="button">Назад</button>
+  </section>
+
+  <section id="coll" class="app" hidden>
+    <h2>Коллекция</h2>
+    <p class="abal">Собрано: <b id="collCount">0</b> из <span id="collTotal">25</span></p>
+    <p class="muted">Серые предметы ещё не выбиты. Бокс из 5 предметов стоит 5000 кудриков и лежит в магазине.</p>
+    <div class="collgrid" id="collGrid"></div>
+    <p class="muted">Мусора собрано: <b id="collJunk">0</b></p>
+    <h3 class="subh">Шанс выпадения из бокса</h3>
+    <p class="muted">Каждый предмет выпадает со своим шансом, но в боксе максимум 5 предметов. Если выпало больше, остаются самые редкие. Пустые места занимает мусор.</p>
+    <ul class="cuptable" id="dropList"></ul>
+    <button class="btn" id="collBack" type="button">Назад</button>
+  </section>
+
+  <section id="cups" class="app" hidden>
+    <h2>Кубки</h2>
+    <p class="abal">Твои кубки: <b id="cupTotal">0</b> из 100000</p>
+    <div class="leaguebox">
+      <div class="leaguehead"><span class="leaguename" id="leagueName">Бронза</span><span class="muted" id="leagueNext"></span></div>
+      <div class="leaguebar"><div id="leagueFill"></div></div>
+    </div>
+    <ul class="cuptable" id="leagueList"></ul>
+    <p class="muted">Кубки даются в конце каждого уровня из 10 примеров. Чем больше верных ответов, тем больше кубков. Ошибки кубки не отнимают, а на нуле верных ответов получишь 0.</p>
+    <ul class="cuptable" id="cupTable"></ul>
+    <button class="btn" id="cupsBack" type="button">Назад</button>
+  </section>
+
+  <section id="leaders" class="app" hidden>
+    <h2>🏆 Таблица лидеров</h2>
+    <p class="muted">Монеты игроков, сохранённые на этом устройстве и в этом браузере.</p>
+    <label class="field">Имя игрока <input id="leaderName" maxlength="16" placeholder="Например, Мансур"></label>
+    <button class="btn primary" id="saveLeaderName" type="button">Сохранить имя</button>
+    <ul class="list" id="leaderList"></ul>
+    <p class="muted">Для единой таблицы лидеров между разными телефонами нужен общий сервер/база данных. Этот HTML-файл сам по себе не может публиковать монеты всех игроков в общий рейтинг.</p>
+    <button class="btn" id="leaderBack" type="button">Назад</button>
+  </section>
+  <section id="tasks" class="app" hidden>
+    <h2>Задания</h2>
+    <p class="muted">Выбери раздел заданий.</p>
+    <div class="actions" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <button class="btn primary" id="dailyTasks" type="button">Ежедневные</button>
+      <button class="btn" id="dayTasks" type="button">Дневные</button>
+    </div>
+    <div class="card" id="taskContent" style="align-items:stretch;text-align:left">
+      <h2 id="taskTitle" style="font-size:18px">Ежедневные задания</h2>
+      <p id="taskText" class="muted">Тут пока что нечего нет.</p>
+    </div>
+    <button class="btn" id="tasksBack" type="button">В меню</button>
+  </section>
+
+  <section id="tutorial" class="app" hidden>
+    <div class="tdots" id="tdots" aria-hidden="true"></div>
+    <h2 id="ttitle"></h2>
+    <p id="ttext"></p>
+    <div class="card" id="tdemo" hidden>
+      <div class="problem" id="tq">6 × 7 = 52</div>
+      <div class="sub">Пример решён неверно. Выбери правильный ответ.</div>
+      <div class="choices" id="tch" style="width:100%">
+        <button class="choice" type="button" data-v="36">36</button>
+        <button class="choice" type="button" data-v="42">42</button>
+        <button class="choice" type="button" data-v="48">48</button>
+      </div>
+      <div class="status" id="tfb" aria-live="polite"></div>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="tnext" type="button">Далее</button>
+      <button class="btn" id="tback" type="button">Назад</button>
+      <button class="btn" id="tskip" type="button">Пропустить</button>
+    </div>
+  </section>
+
+  <section id="admin" class="app" hidden>
+    <h2 class="admintitle">Админ панель</h2>
+    <div class="adminbox">
+      <p class="abal">Монеты: <b id="aCoins">0</b></p>
+      <p class="abal">Кудрики: <b id="aKud">0</b></p>
+      <div class="row3">
+        <button class="btn" type="button" data-add="100">+100</button>
+        <button class="btn" type="button" data-add="1000">+1000</button>
+        <button class="btn" type="button" data-add="10000">+10000</button>
+      </div>
+      <div class="setrow">
+        <label class="field" for="aSet">Установить монеты
+          <input id="aSet" type="number" inputmode="numeric" min="0" max="9999999" value="0">
+        </label>
+        <button class="btn" id="aSetBtn" type="button">Установить</button>
+      </div>
+    </div>
+    <div class="adminbox">
+      <button class="btn" id="aOpenAll" type="button">Открыть все уровни</button>
+      <button class="btn" id="aLockAll" type="button">Закрыть все уровни</button>
+      <button class="btn" id="aArt" type="button">Артефакт: выдать</button>
+      <button class="btn" id="aMath" type="button">Математик: выдать</button>
+      <button class="btn" id="aHelper" type="button">Помощник: выдать</button>
+      <button class="btn" id="aHc" type="button">Хардкор: выдать</button>
+    </div>
+    <button class="btn" id="aBack" type="button">Назад</button>
+  </section>
+
+  <section id="shop" class="app" hidden>
+    <h2>Магазин</h2>
+    <div class="item">
+      <div class="itemhead">
+        <span class="itemname">Бокс с символами</span>
+        <span class="price">5000 кудриков</span>
+      </div>
+      <p class="muted">В боксе 5 предметов: цифры, знаки и мусор. У каждого свой шанс выпадения, он виден в «Коллекции».</p>
+      <button class="btn primary" id="boxBuy" type="button">Купить и открыть</button>
+      <p class="muted" id="boxMsg"></p>
+      <div class="boxres" id="boxRes"></div>
+    </div>
+    <div class="item">
+      <div class="itemhead">
+        <span class="itemname">Обмен монет</span>
+        <span class="price">1 монета = 1 кудрик</span>
+      </div>
+      <p class="muted">Возьми монеты и заплати за них кудриками. У тебя: <b id="exKud">0</b> кудриков.</p>
+      <div class="setrow">
+        <label class="field" for="exAmount">Сколько монет взять
+          <input id="exAmount" type="number" inputmode="numeric" min="1" max="9999999" value="100">
+        </label>
+        <button class="btn primary" id="exBuy" type="button">Взять</button>
+      </div>
+      <p class="muted" id="exInfo">Возьмёшь 100 монет, заплатишь 100 кудриков</p>
+    </div>
+    <div class="item">
+      <div class="itemhead">
+        <span class="itemname">Артефакт</span>
+        <span class="price">3400 монет</span>
+      </div>
+      <p class="muted">Во время игры нажми на артефакт, и он подскажет первую цифру ответа. Работает на любом уровне. Покупается один раз.</p>
+      <button class="btn primary" id="artBuy" type="button">Купить</button>
+    </div>
+    <div class="item">
+      <div class="itemhead">
+        <span class="itemname">Математик</span>
+        <span class="price">1340 монет</span>
+      </div>
+      <p class="muted">Решает один пример из десяти. Во время игры нажми кнопку «Математик», и текущий пример будет решён верно. Один раз за игру. Покупается один раз.</p>
+      <button class="btn primary" id="mathBuy" type="button">Купить</button>
+    </div>
+    <div class="item">
+      <div class="itemhead">
+        <span class="itemname">Помощник</span>
+        <span class="price">1240 монет</span>
+      </div>
+      <p class="muted">Решает половину длинного примера. Работает на уровнях 10 и 12: нажми «Помощник», и выражение в скобках будет посчитано. Один раз за игру. Покупается один раз.</p>
+      <button class="btn primary" id="helperBuy" type="button">Купить</button>
+    </div>
+    <div class="item">
+      <div class="itemhead">
+        <span class="itemname">Хардкор режим</span>
+        <span class="price">1000 монет</span>
+      </div>
+      <p class="muted">После покупки в меню появится переключатель «Хардкор». Когда он включён, на каждом уровне на пример дают всего 11 секунд вместо обычного времени. Покупается один раз.</p>
+      <button class="btn primary" id="hcBuy" type="button">Купить</button>
+    </div>
+    <div class="item">
+      <div class="itemhead"><span class="itemname">Турбо режим</span><span class="price">2450 монет</span></div>
+      <p class="muted">Перед каждым уровнем выбирай режим. В турбо режиме на каждый вопрос даётся только 5 секунд. Покупается один раз.</p>
+      <button class="btn primary" id="turboBuy" type="button">Купить</button>
+    </div>
+    <button class="btn" id="shopback" type="button">Назад</button>
+  </section>
+
+  <section id="builder" class="app" hidden>
+    <h2>Свой уровень</h2>
+    <p class="muted">Десять примеров по твоим правилам. Монеты за этот уровень не начисляются.</p>
+    <fieldset class="group">
+      <legend>Действия</legend>
+      <div class="opts">
+        <label class="chk"><input type="checkbox" id="opAdd" checked> +</label>
+        <label class="chk"><input type="checkbox" id="opSub"> −</label>
+        <label class="chk"><input type="checkbox" id="opMul" checked> ×</label>
+        <label class="chk"><input type="checkbox" id="opDiv"> ÷</label>
+      </div>
+    </fieldset>
+    <div class="row2">
+      <label class="field" for="numLo">Числа от
+        <input id="numLo" type="number" inputmode="numeric" min="1" max="99" value="2">
+      </label>
+      <label class="field" for="numHi">до
+        <input id="numHi" type="number" inputmode="numeric" min="1" max="99" value="12">
+      </label>
+    </div>
+    <label class="field" for="secs">Секунд на каждый пример
+      <input id="secs" type="number" inputmode="numeric" min="3" max="60" value="10">
+    </label>
+    <fieldset class="group">
+      <legend>Ответ</legend>
+      <div class="opts three">
+        <label class="chk"><input type="radio" name="mode" id="modeType" value="type" checked> Вводить с клавиатуры</label>
+        <label class="chk"><input type="radio" name="mode" id="mode3" value="3"> Выбрать из трёх вариантов</label>
+        <label class="chk"><input type="radio" name="mode" id="mode6" value="6"> Выбрать из шести вариантов</label>
+      </div>
+    </fieldset>
+    <p class="bmsg" id="bmsg" aria-live="polite"></p>
+    <div class="actions">
+      <button class="btn primary" id="bplay" type="button">Играть</button>
+      <button class="btn" id="bback" type="button">Назад</button>
+    </div>
+  </section>
+
+  <section id="modePick" class="app" hidden>
+    <h2>Выбери режим</h2>
+    <p class="muted">Выбери, сколько времени будет на каждый вопрос.</p>
+    <div class="actions">
+      <button class="btn primary" id="modeNormal" type="button">Обычный</button>
+      <button class="btn" id="modeHardcore" type="button">Хардкор — 11 секунд</button>
+      <button class="btn" id="modeTurbo" type="button">⚡ Турбо — 5 секунд</button>
+      <button class="btn" id="modeCancel" type="button">Назад</button>
+    </div>
+  </section>
+  <section id="play" class="app" hidden>
+    <div class="top">
+      <span class="count" id="count">Пример 1 из 10</span>
+      <span class="coins" id="roundCoins">+0</span>
+      <span class="time" id="time">7.0</span>
+    </div>
+    <div class="track"><div class="bar" id="bar"></div></div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+    <div class="card">
+      <div class="problem" id="problem">2 × 3 =</div>
+      <div class="sub" id="sub" hidden>Пример решён неверно. Выбери правильный ответ.</div>
+      <div class="answer" id="answer" aria-live="polite"></div>
+      <div class="status" id="status" aria-live="polite"></div>
+      <button class="hintbtn" id="hint" type="button" hidden>Артефакт: подсказка</button>
+      <button class="hintbtn" id="mathBtn" type="button" hidden>Математик: решить пример</button>
+      <button class="hintbtn" id="helperBtn" type="button" hidden>Помощник: решить скобку</button>
+    </div>
+    <div class="pad" id="pad">
+      <button class="key" type="button" data-k="1">1</button>
+      <button class="key" type="button" data-k="2">2</button>
+      <button class="key" type="button" data-k="3">3</button>
+      <button class="key" type="button" data-k="4">4</button>
+      <button class="key" type="button" data-k="5">5</button>
+      <button class="key" type="button" data-k="6">6</button>
+      <button class="key" type="button" data-k="7">7</button>
+      <button class="key" type="button" data-k="8">8</button>
+      <button class="key" type="button" data-k="9">9</button>
+      <button class="key fn" type="button" data-k="back" aria-label="Стереть">Стереть</button>
+      <button class="key" type="button" data-k="0">0</button>
+      <button class="key go" type="button" data-k="ok">Ответ</button>
+      <button class="key fn" id="negKey" type="button" data-k="neg" style="grid-column: 1 / -1" hidden>Минус (−)</button>
+    </div>
+    <div class="choices" id="choices" hidden>
+      <button class="choice" type="button" data-i="0"></button>
+      <button class="choice" type="button" data-i="1"></button>
+      <button class="choice" type="button" data-i="2"></button>
+      <button class="choice" type="button" data-i="3"></button>
+      <button class="choice" type="button" data-i="4"></button>
+      <button class="choice" type="button" data-i="5"></button>
+    </div>
+  </section>
+
+  <section id="result" class="app" hidden>
+    <h2 id="rtitle">Результат</h2>
+    <div class="score"><span class="big" id="rscore">0</span><span class="of" id="rof">из 10</span></div>
+    <p class="muted" id="rnote"></p>
+    <p class="coinline" id="rcoins"></p>
+    <ul class="list" id="rlist"></ul>
+    <div class="actions">
+      <button class="btn primary" id="again" type="button">Играть ещё раз</button>
+      <button class="btn" id="next" type="button" hidden>Перейти на уровень 2</button>
+      <button class="btn" id="tomenu" type="button">В меню</button>
+    </div>
+  </section>
+</main>
+
+<div id="splash" hidden aria-live="polite">
+  <div class="sn" id="sn">Уровень 1</div>
+  <div class="st" id="st">Таблица умножения</div>
+  <div class="sx" id="sx">11 секунд на пример</div>
+</div>
+
+<script id="accounts-shim">
+/* Local accounts: each account keeps its own progress in this browser. Runs before the game reads any saved data. */
+(function () {
+  var ls = window.localStorage, cur = null;
+  try { cur = ls.getItem('acc-current'); } catch (e) {}
+  window.ACC_CURRENT = cur;
+  if (!cur) return;
+  var pre = 'acc:' + cur + ':';
+  var g = Storage.prototype.getItem, st = Storage.prototype.setItem, rm = Storage.prototype.removeItem;
+  function map(k) { return typeof k === 'string' && k.indexOf('schet-') === 0 ? pre + k : k; }
+  Storage.prototype.getItem = function (k) { return g.call(this, map(k)); };
+  Storage.prototype.setItem = function (k, v) { return st.call(this, map(k), v); };
+  Storage.prototype.removeItem = function (k) { return rm.call(this, map(k)); };
+})();
+</script>
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script>
+(function () {
+  /* one-time reset of all saved progress for this version */
+  var SAVED_KEYS = ['schet-best', 'schet-coins', 'schet-kud', 'schet-cups', 'schet-coll', 'schet-unlocked', 'schet-unlock4', 'schet-custom', 'schet-tutorial-done', 'schet-hardcore-on'];
+  try {
+    if (localStorage.getItem('schet-ver') !== '2') {
+      SAVED_KEYS.forEach(function (k) { localStorage.removeItem(k); });
+      localStorage.setItem('schet-ver', '2');
+    }
+  } catch (e) {}
+
+  var TOTAL = 10;
+  function totalOf(lv) { return (LEVELS[lv] && LEVELS[lv].total) || TOTAL; }
+  var LEVELS = {
+    1: { sec: 11, title: 'Уровень 1' },
+    2: { sec: 14, title: 'Уровень 2', choice: true },
+    3: { sec: 16, title: 'Уровень 3', choice: true },
+    4: { sec: 19, title: 'Уровень 4', choice: true, n: 6 },
+    5: { sec: 14, title: 'Уровень 5' },
+    6: { sec: 24, title: 'Уровень 6' },
+    7: { sec: 29, title: 'Уровень 7' },
+    8: { sec: 10, title: 'Свой уровень', noReward: true },
+    9: { sec: 14, title: 'Уровень 8' },
+    10: { sec: 19, title: 'Уровень 9' },
+    11: { sec: 24, title: 'Уровень 10' },
+    12: { sec: 14, title: 'Бесконечный режим', endless: true },
+    13: { sec: 19, title: 'Лёгкий режим', reward: 50 },
+    15: { sec: 7, title: 'Дуэль', noReward: true },
+    14: { sec: 24, title: 'Уровень 11', neg: true },
+    16: { sec: 24, title: 'Уровень 12' },
+    17: { sec: 24, title: 'Уровень 13' },
+    18: { sec: 24, title: 'Ауданы тап' },
+    19: { sec: 24, title: 'Периметр' },
+    20: { sec: 24, title: 'Часы' },
+    21: { sec: 29, title: 'Алгебра N2' },
+    22: { sec: 15, title: '1 2 3 ... 17', total: 34 },
+    23: { sec: 20, title: 'Челлендж 100', total: 100 }
+  };
+  var $ = function (id) { return document.getElementById(id); };
+  var menu = $('menu'), play = $('play'), result = $('result');
+  var bar = $('bar'), timeEl = $('time'), countEl = $('count'), dotsEl = $('dots');
+  var problemEl = $('problem'), answerEl = $('answer'), statusEl = $('status');
+
+  var SPLASH = {
+    1: { n: 'Уровень 1', t: 'Таблица умножения', x: '11 секунд на пример' },
+    2: { n: 'Уровень 2', t: 'Найди ошибку', x: '14 секунд, найди правильный ответ из трёх', cls: 'dark' },
+    3: { n: 'Уровень 3', t: '3 варианта', x: '16 секунд, выбери ответ из трёх', cls: 'green' },
+    4: { n: 'Уровень 4', t: '6 вариантов', x: '19 секунд, выбери ответ из шести', cls: 'blue' },
+    5: { n: 'Уровень 5', t: '1, 2 и 3', x: 'Примеры из уровней 1, 2 и 3', cls: 'purple' },
+    6: { n: 'Уровень 6', t: 'Задачи', x: '24 секунды на задачу', cls: 'orange' },
+    7: { n: 'Уровень 7', t: 'Алгебра', x: '29 секунд, найди неизвестное', cls: 'teal' },
+    9: { n: 'Уровень 8', t: 'Квадраты', x: '14 секунд на пример', cls: 'pink' },
+    10: { n: 'Уровень 9', t: 'Кубы', x: '19 секунд на пример', cls: 'indigo' },
+    11: { n: 'Уровень 10', t: 'Длинные примеры', x: '24 секунды, несколько действий и скобки', cls: 'gold' },
+    12: { n: 'Бесконечный режим', t: '10 ошибок, и игра окончена', x: 'Чем дальше, тем сложнее', cls: 'dark' },
+    13: { n: 'Лёгкий режим', t: 'Сложение и вычитание', x: '19 секунд, числа от 1 до 99', cls: 'green' },
+    14: { n: 'Уровень 11', t: 'Отрицательные числа', x: '24 секунды, бывают ответы со знаком минус', cls: 'slate' },
+    16: { n: 'Уровень 12', t: 'Более длинные примеры', x: '24 секунды на пример, 10 примеров', cls: 'red' },
+    17: { n: 'Уровень 13', t: 'Общие знания', x: '24 секунды на вопрос, 10 вопросов', cls: 'teal' },
+    18: { n: 'Уровень 15', t: 'Ауданы тап', x: '24 секунды, найди площадь S', cls: 'green' },
+    19: { n: 'Уровень 14', t: 'Периметр', x: '24 секунды, найди периметр P', cls: 'orange' },
+    20: { n: 'Уровень 16', t: 'Часы', x: '24 секунды, перемотай время вперёд', cls: 'blue' },
+    23: { n: 'Челлендж', t: '100 примеров', x: '20 секунд на каждый, всё сложнее', cls: 'red' },
+    22: { n: 'Уровень 18', t: '1 2 3 ... 17', x: '34 вопроса, 15 секунд на каждый', cls: 'purple' },
+    21: { n: 'Уровень 17', t: 'Алгебра N2', x: '29 секунд, уравнения, периметр, площадь и степени', cls: 'teal' }
+  };
+  function customSplash() {
+    var c = LEVELS[8];
+    return { n: 'Свой уровень', t: 'Твои правила', x: c.sec + ' сек. на пример, ' + (c.choice ? 'выбор из ' + (c.n || 3) : 'ввод ответа'), cls: 'dark' };
+  }
+  var MAX_MISTAKES = 10, mistakes = 0;
+  var HC_SECONDS = 11, hardcoreOn = false;
+  var duel = null, duelTime = 0;
+  try { hardcoreOn = localStorage.getItem('schet-hardcore-on') === '1'; } catch (e) {}
+  function saveHardcore() { try { localStorage.setItem('schet-hardcore-on', hardcoreOn ? '1' : '0'); } catch (e) {} }
+  var choicesEl = $('choices'), currentOpts = [], curCfg = LEVELS[1], mathUsed = false, helperUsed = false;
+  var level = 1, questions = [], idx = 0, results = [], typed = '';
+  var deadline = 0, total = 0, raf = 0, running = false, locked = true, timer = 0;
+
+  function rand(a, b) { return a + Math.floor(Math.random() * (b - a + 1)); }
+
+  function makeQuestion(lv) {
+    if (lv === 5) {
+      var sub = rand(1, 3);
+      var mixed = makeQuestion(sub);
+      mixed.lv = sub;
+      return mixed;
+    }
+    if (lv === 14) {
+      var nt = rand(0, 6), n1, n2, ntext, nans;
+      if (nt === 0) { n1 = rand(10, 40); n2 = n1 + rand(5, 30); ntext = n1 + ' − ' + n2; nans = n1 - n2; }
+      else if (nt === 1) { n1 = rand(15, 40); n2 = rand(5, n1 - 3); ntext = '−' + n1 + ' + ' + n2; nans = -n1 + n2; }
+      else if (nt === 2) { n1 = rand(3, 9); n2 = rand(3, 9); ntext = '(−' + n1 + ') × ' + n2; nans = -n1 * n2; }
+      else if (nt === 3) { n1 = rand(10, 30); n2 = rand(10, 30); ntext = '−' + n1 + ' − ' + n2; nans = -n1 - n2; }
+      else if (nt === 4) {
+        n2 = rand(3, 9); n1 = n2 * rand(3, 9);
+        if (rand(0, 1) === 0) { ntext = '−' + n1 + ' ÷ ' + n2; nans = -(n1 / n2); }
+        else { ntext = n1 + ' ÷ (−' + n2 + ')'; nans = -(n1 / n2); }
+      }
+      else if (nt === 5) { n1 = rand(3, 9); n2 = rand(3, 9); ntext = '(−' + n1 + ') × (−' + n2 + ')'; nans = n1 * n2; }
+      else { n2 = rand(20, 50); n1 = rand(5, n2 - 5); ntext = '−' + n1 + ' + ' + n2; nans = -n1 + n2; }
+      return { key: ntext, text: ntext, ans: nans, kind: 'expr' };
+    }
+    if (lv === 13) {
+      var la = rand(1, 99), lb = rand(1, 99);
+      if (rand(0, 1) === 0) return { key: la + '+' + lb, text: la + ' + ' + lb, ans: la + lb };
+      if (la < lb) { var lt = la; la = lb; lb = lt; }
+      return { key: la + '-' + lb, text: la + ' − ' + lb, ans: la - lb };
+    }
+    if (lv === 12) {
+      var answered = idx;
+      var pool = answered < 10 ? [1] : answered < 20 ? [1, 2] : answered < 35 ? [1, 2, 3] : answered < 50 ? [2, 3, 4] : [3, 4, 9, 10];
+      var esub = pool[rand(0, pool.length - 1)];
+      var eq = makeQuestion(esub);
+      eq.lv = esub;
+      return eq;
+    }
+    if (lv === 23) {
+      var pool23 = setPos < 40 ? [1, 13] : setPos < 70 ? [1, 2, 3, 5, 9, 18, 19, 13] : setPos < 90 ? [4, 6, 9, 10, 14, 16, 17, 20, 21] : [4, 6, 7, 10, 11, 14, 16, 21];
+      var csub = pool23[rand(0, pool23.length - 1)];
+      var cq = makeQuestion(csub);
+      cq.lv = csub;
+      cq.key = csub + '|' + cq.key;
+      return cq;
+    }
+    if (lv === 22) {
+      var MIX = [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 14, 16, 17, 19, 18, 20, 21];
+      var msub = MIX[rand(0, MIX.length - 1)];
+      var mq = makeQuestion(msub);
+      mq.lv = msub;
+      mq.key = msub + '|' + mq.key;
+      return mq;
+    }
+    if (lv === 21) {
+      var sup = { 2: '²', 3: '³', 4: '⁴', 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹' };
+      var kt = rand(0, 5), kx, ky, kp, kq, kz, kText, kAns;
+      var KL = ['x', 'y', 'c', 'a'], kl = KL[rand(0, 3)];
+      if (kt === 0) { kx = rand(10, 90); ky = rand(10, 90); kText = kl + ' − ' + kx + ' = ' + ky + '\nНайди ' + kl; kAns = kx + ky; }
+      else if (kt === 1) { kx = rand(10, 90); ky = rand(kx + 5, 150); kText = kl + ' + ' + kx + ' = ' + ky + '\nНайди ' + kl; kAns = ky - kx; }
+      else if (kt === 2) { kx = rand(15, 60); ky = rand(20, 80); kText = 'Периметр тап. Төртбұрыш\na = ' + kx + ', b = ' + ky + '\nP = ?'; kAns = 2 * (kx + ky); }
+      else if (kt === 3) { kx = rand(3, 15); ky = rand(3, 15); kText = 'Ауданы тап. Төртбұрыш\na = ' + kx + ', b = ' + ky + '\nS = ?'; kAns = kx * ky; }
+      else if (kt === 4) { kp = rand(2, 5); kq = rand(2, 4); kText = kl + sup[kp] + ' × ' + kl + sup[kq] + ' = ' + kl + '^?\nНайди степень'; kAns = kp + kq; }
+      else { kz = rand(2, 9); kText = kl + ' ÷ ' + kz + ' = ' + (kx = rand(3, 20)) + '\nНайди ' + kl; kAns = kz * kx; }
+      return { key: kText, text: kText, ans: kAns, kind: 'alg' };
+    }
+    if (lv === 20) {
+      var cm = rand(1, 49), cd = rand(1, 99) / 10, cs = rand(0, 1);
+      var cdText = String(cd).replace('.', ',');
+      var ctext = cs === 0
+        ? 'На часах ' + cm + ' мин. Перемотай вперёд на ' + cdText + ' мин. Сколько минут будет? (целых)'
+        : 'Сейчас ' + cm + ' минут. Если перемотать время вперёд на ' + cdText + ', сколько будет минут? (целых)';
+      return { key: cm + 'c' + cdText, text: ctext, ans: Math.floor(cm + cd + 1e-9), kind: 'expr' };
+    }
+    if (lv === 19) {
+      var pw = rand(2, 15), pl = rand(pw + 1, 20), ptype = rand(0, 2), ptext;
+      if (ptype === 0) ptext = 'Периметр прямоугольника: ширина ' + pw + ', длина ' + pl + '. P = ' + pw + ' × 2 + ' + pl + ' × 2';
+      else if (ptype === 1) ptext = 'Найди периметр прямоугольника. Ширина ' + pw + ' см, длина ' + pl + ' см';
+      else ptext = 'Төртбұрыш периметрін тап. Ені ' + pw + ' см, ұзындығы ' + pl + ' см';
+      return { key: pw + 'p' + pl, text: ptext, ans: pw * 2 + pl * 2, kind: 'expr' };
+    }
+    if (lv === 18) {
+      var aw = rand(2, 12), ah = rand(2, 12), atype = rand(0, 2), atext;
+      if (atype === 0) atext = 'S = ' + aw + ' × ' + ah;
+      else if (atype === 1) atext = 'Длина ' + aw + ' см, ширина ' + ah + ' см. Найди площадь S (см²)';
+      else atext = 'Ұзындығы ' + aw + ' см, ені ' + ah + ' см. S табыңыз (см²)';
+      return { key: aw + 'x' + ah, text: atext, ans: aw * ah, kind: atype === 0 ? undefined : 'expr' };
+    }
+    if (lv === 17) {
+      var facts = [
+        ['Сколько углов у треугольника?', 3],
+        ['Сколько минут в 3 часах?', 180],
+        ['Сколько дней в одной неделе?', 7],
+        ['Сколько сторон у квадрата?', 4],
+        ['Сколько месяцев в году?', 12],
+        ['Сколько секунд в одной минуте?', 60],
+        ['Сколько будет 5 + 7?', 12],
+        ['Сколько будет 9 × 6?', 54],
+        ['Сколько сантиметров в одном метре?', 100],
+        ['Сколько яиц в двух дюжинах?', 24]
+      ];
+      var fact = facts[rand(0, facts.length - 1)];
+      return { key: fact[0], text: fact[0], ans: fact[1], kind: 'expr' };
+    }
+    if (lv === 16) {
+      var la = rand(2, 9), lb = rand(2, 6), lc = rand(2, 20);
+      var product = la * lb;
+      var longText = '(' + la + ' × ' + lb + ' + ' + lc + ') − ' + lc;
+      var longHalf = '(' + product + ' + ' + lc + ') − ' + lc;
+      return { key: longText, text: longText, half: longHalf, ans: product, kind: 'expr' };
+    }
+    if (lv === 11) {
+      var ea =rand(11, 15), eb = rand(2, 6), ec = rand(20, 60), ed = rand(10, 50), ep = ea * eb, et;
+      var form = rand(0, 3);
+      var br = '(' + ea + ' × ' + eb + ')';
+      if (form === 0) et = { text: br + ' + ' + ec + ' + ' + ed, half: ep + ' + ' + ec + ' + ' + ed, ans: ep + ec + ed };
+      else if (form === 1) et = { text: br + ' + ' + ec + ' − ' + ed, half: ep + ' + ' + ec + ' − ' + ed, ans: ep + ec - ed };
+      else if (form === 2) et = { text: ec + ' + ' + ed + ' + ' + br, half: ec + ' + ' + ed + ' + ' + ep, ans: ec + ed + ep };
+      else et = { text: br + ' − ' + ed + ' + ' + ec, half: ep + ' − ' + ed + ' + ' + ec, ans: ep - ed + ec };
+      if (et.ans <= 0) { et = { text: br + ' + ' + ec + ' + ' + ed, half: ep + ' + ' + ec + ' + ' + ed, ans: ep + ec + ed }; }
+      return { key: et.text, text: et.text, half: et.half, ans: et.ans, kind: 'expr' };
+    }
+    if (lv === 10) {
+      var cu = rand(2, 11);
+      return { key: cu + 'c', text: cu + '³', ans: cu * cu * cu };
+    }
+    if (lv === 9) {
+      var sq = rand(2, 15);
+      return { key: sq + 's', text: sq + '²', ans: sq * sq };
+    }
+    if (lv === 8) {
+      var op =CUSTOM.ops[rand(0, CUSTOM.ops.length - 1)], lo = CUSTOM.lo, hi = CUSTOM.hi;
+      var c1 = rand(lo, hi), c2 = rand(lo, hi);
+      if (op === '+') return { key: c1 + '+' + c2, text: c1 + ' + ' + c2, ans: c1 + c2 };
+      if (op === '−') {
+        if (c1 < c2) { var swp = c1; c1 = c2; c2 = swp; }
+        return { key: c1 + '-' + c2, text: c1 + ' − ' + c2, ans: c1 - c2 };
+      }
+      if (op === '×') return { key: c1 + 'x' + c2, text: c1 + ' × ' + c2, ans: c1 * c2 };
+      var dv = rand(Math.max(2, lo), Math.max(2, hi)), qt = rand(Math.max(2, lo), Math.max(2, hi));
+      return { key: (dv * qt) + '/' + dv, text: (dv * qt) + ' ÷ ' + dv, ans: qt };
+    }
+    if (lv === 6) {
+      var P = [
+        ['Яблонь', 'груш', 'деревьев'],
+        ['Красных шаров', 'синих шаров', 'шаров'],
+        ['Кошек', 'собак', 'животных'],
+        ['Конфет', 'печенек', 'сладостей'],
+        ['Ручек', 'карандашей', 'предметов']
+      ];
+      var pr = P[rand(0, P.length - 1)], A = pr[0], B = pr[1], T = pr[2];
+      var Bc = B.charAt(0).toUpperCase() + B.slice(1);
+      var story = function (text, ans) { return { key: text, text: text, ans: ans, kind: 'story' }; };
+      var tt = rand(0, 5), n, k, m;
+      if (tt === 0) {
+        n = rand(10, 30); k = rand(2, 6);
+        return story(A + ': ' + n + '. ' + Bc + ' на ' + k + ' меньше. Сколько ' + B + '?', n - k);
+      }
+      if (tt === 1) {
+        n = rand(10, 30); k = rand(2, 6);
+        return story(A + ': ' + n + '. ' + Bc + ' на ' + k + ' больше. Сколько ' + B + '?', n + k);
+      }
+      if (tt === 2) {
+        n = rand(2, 6); k = rand(2, 4);
+        return story(A + ': ' + n + '. ' + Bc + ' в ' + k + (k < 5 ? ' раза' : ' раз') + ' больше. Сколько ' + B + '?', n * k);
+      }
+      if (tt === 3) {
+        m = rand(2, 6); k = rand(2, 4); n = m * k;
+        return story(A + ': ' + n + '. ' + Bc + ' в ' + k + (k < 5 ? ' раза' : ' раз') + ' меньше. Сколько ' + B + '?', m);
+      }
+      n = rand(10, 40); m = rand(10, 40);
+      return story(A + ': ' + n + ', ' + B + ': ' + m + '. Сколько всего ' + T + '?', n + m);
+    }
+    if (lv === 7) {
+      var L = ['x', 'y', 'c', 'a'];
+      for (var i = L.length - 1; i > 0; i--) { var j = rand(0, i), sw = L[i]; L[i] = L[j]; L[j] = sw; }
+      var alg = function (eq, ask, ans) {
+        var text = eq + '\nНайди ' + ask;
+        return { key: text, text: text, ans: ans, kind: 'alg' };
+      };
+      var ta = rand(0, 6), v, p, s;
+      if (ta === 0) {
+        v = rand(3, 20); p = rand(2, 10);
+        return alg(L[0] + ' + ' + p + ' = ' + (v + p), L[0], v);
+      }
+      if (ta === 1) {
+        v = rand(5, 25); p = rand(2, v - 1);
+        return alg(L[0] + ' − ' + p + ' = ' + (v - p), L[0], v);
+      }
+      if (ta === 2) {
+        p = rand(2, 6); v = rand(2, 9);
+        return alg(p + L[0] + ' = ' + (p * v), L[0], v);
+      }
+      if (ta === 3) {
+        p = rand(2, 4); v = rand(2, 9); s = rand(1, 9);
+        return alg(p + L[0] + ' + ' + s + ' = ' + (p * v + s), L[0], v);
+      }
+      if (ta === 4) {
+        p = rand(2, 4); v = rand(3, 9); s = rand(1, p * v - 1);
+        return alg(p + L[0] + ' − ' + s + ' = ' + (p * v - s), L[0], v);
+      }
+      if (ta === 5) {
+        var v1 = rand(4, 12), v2 = rand(2, v1 - 1);
+        var askFirst = rand(0, 1) === 0;
+        return alg(L[0] + ' + ' + L[1] + ' = ' + (v1 + v2) + '\n' + L[0] + ' − ' + L[1] + ' = ' + (v1 - v2),
+          askFirst ? L[0] : L[1], askFirst ? v1 : v2);
+      }
+      var vc = rand(2, 6), vb = rand(2, 6), va = rand(2, 6);
+      return alg(L[0] + ' + ' + L[1] + ' = ' + (va + vb) + '\n' + L[1] + ' + ' + L[2] + ' = ' + (vb + vc) + '\n' + L[2] + ' = ' + vc,
+        L[0], va);
+    }
+    if (lv === 1) {
+      var a = rand(2, 9), b = rand(2, 9);
+      return { key: a + 'x' + b, text: a + ' × ' + b, ans: a * b };
+    }
+    var t, x, y;
+    if (lv === 4) {
+      t = rand(0, 5);
+      if (t === 0) {
+        x = rand(12, 19); y = rand(11, 15);
+        return { key: x + 'x' + y, text: x + ' × ' + y, ans: x * y };
+      }
+      if (t === 1) {
+        x = rand(11, 20);
+        return { key: x + 's', text: x + '²', ans: x * x };
+      }
+      if (t === 2 || t === 3) {
+        y = rand(11, 15); var r4 = rand(11, 19); x = y * r4;
+        return { key: x + '/' + y, text: x + ' ÷ ' + y, ans: r4 };
+      }
+      if (t === 4) {
+        x = rand(150, 599); y = rand(150, 599);
+        return { key: x + '+' + y, text: x + ' + ' + y, ans: x + y };
+      }
+      x = rand(300, 799); y = rand(100, x - 100);
+      return { key: x + '-' + y, text: x + ' − ' + y, ans: x - y };
+    }
+    if (lv === 3) {
+      t = rand(0, 4);
+      if (t === 0) {
+        x = rand(11, 25); y = rand(6, 12);
+        return { key: x + 'x' + y, text: x + ' × ' + y, ans: x * y };
+      }
+      if (t === 1 || t === 2) {
+        y = rand(3, 12); var r = rand(6, 19); x = y * r;
+        return { key: x + '/' + y, text: x + ' ÷ ' + y, ans: r };
+      }
+      if (t === 3) {
+        x = rand(120, 899); y = rand(110, 899);
+        return { key: x + '+' + y, text: x + ' + ' + y, ans: x + y };
+      }
+      x = rand(300, 999); y = rand(110, x - 50);
+      return { key: x + '-' + y, text: x + ' − ' + y, ans: x - y };
+    }
+    t = rand(0, 3);
+    if (t === 0 || t === 1) {
+      x = rand(12, 19); y = rand(3, 9);
+      return { key: x + 'x' + y, text: x + ' × ' + y, ans: x * y };
+    }
+    if (t === 2) {
+      x = rand(25, 89); y = rand(15, 89);
+      return { key: x + '+' + y, text: x + ' + ' + y, ans: x + y };
+    }
+    x = rand(50, 99); y = rand(11, x - 5);
+    return { key: x + '-' + y, text: x + ' − ' + y, ans: x - y };
+  }
+
+  function makeOptions(ans, n) {
+    var cands = [-20, -10, -5, -3, -2, -1, 1, 2, 3, 5, 10, 20];
+    var opts = [ans];
+    while (opts.length < n) {
+      var v = ans + cands[rand(0, cands.length - 1)];
+      if (v > 0 && opts.indexOf(v) === -1) opts.push(v);
+    }
+    for (var i = opts.length - 1; i > 0; i--) {
+      var j = rand(0, i), tmp = opts[i]; opts[i] = opts[j]; opts[j] = tmp;
+    }
+    return opts;
+  }
+
+  /* level 2: wrong options look like typical mistakes (12 + 45: 33 is 45 − 12, 45 is one of the numbers) */
+  function makeTrapOptions(q) {
+    var m = q.text.match(/(\d+) (\S) (\d+)/);
+    if (!m) return makeOptions(q.ans, 3);
+    var a = parseInt(m[1], 10), b = parseInt(m[3], 10), op = m[2], ans = q.ans, c = [];
+    if (op === '+') c = [Math.abs(a - b), a, b, ans + 10, ans - 10, ans + 1, ans - 1];
+    else if (op === '−') c = [a + b, b, a, ans + 10, ans - 10, ans + 1, ans - 1];
+    else c = [a + b, ans + a, ans - a, ans + b, ans - b, ans + 10, ans - 10];
+    var pool = [];
+    c.forEach(function (v) { if (v > 0 && v !== ans && pool.indexOf(v) === -1) pool.push(v); });
+    var opts = [ans];
+    while (opts.length < 3 && pool.length) {
+      opts.push(pool.splice(rand(0, Math.min(pool.length - 1, 3)), 1)[0]);
+    }
+    while (opts.length < 3) {
+      var v = ans + rand(-12, 12);
+      if (v > 0 && opts.indexOf(v) === -1) opts.push(v);
+    }
+    for (var i = opts.length - 1; i > 0; i--) {
+      var j = rand(0, i), t = opts[i]; opts[i] = opts[j]; opts[j] = t;
+    }
+    return opts;
+  }
+
+  var setPos = 0;
+  function makeSet(lv) {
+    var seen = {}, out = [], tries = 0;
+    while (out.length < totalOf(lv)) {
+      setPos = out.length;
+      var q = makeQuestion(lv);
+      tries++;
+      if (seen[q.key] && tries < 300) continue;
+      seen[q.key] = 1;
+      out.push(q);
+    }
+    return out;
+  }
+
+  /* coins: 100 per correct answer */
+  var REWARD = 100, COSTS = { 4: 200, 6: 1200, 7: 1000, 8: 1000, 9: 1500, 10: 1800, 11: 2000, 12: 3000, 13: 100, 14: 3000, 16: 3500, 17: 1230, 19: 4500, 18: 5000, 20: 7000 }, coins = 0, roundCoins = 0, unlocked = {};
+  try { coins = parseInt(localStorage.getItem('schet-coins') || '0', 10) || 0; } catch (e) {}
+  try {
+    unlocked = JSON.parse(localStorage.getItem('schet-unlocked') || '{}') || {};
+    if (localStorage.getItem('schet-unlock4') === '1') unlocked[4] = true;
+  } catch (e) { unlocked = {}; }
+  /* owner copy: admin panel is granted (price for others stays 47060) */
+  var OWNER_ADMIN = true;
+  if (OWNER_ADMIN) unlocked.admin = true;
+  /* level 12 used to be free; lock it once for saves made before it got a price */
+  try {
+    if (localStorage.getItem('schet-l16-ver') !== '1') { delete unlocked[16]; localStorage.setItem('schet-l16-ver', '1'); localStorage.setItem('schet-unlocked', JSON.stringify(unlocked)); }
+  } catch (e) { delete unlocked[16]; }
+  function saveUnlocked() { try { localStorage.setItem('schet-unlocked', JSON.stringify(unlocked)); } catch (e) {} }
+  var kud = 0;
+  try { kud = parseInt(localStorage.getItem('schet-kud') || '0', 10) || 0; } catch (e) {}
+  function saveKud() { try { localStorage.setItem('schet-kud', String(kud)); } catch (e) {} }
+  function saveCoins() { try { localStorage.setItem('schet-coins', String(coins)); } catch (e) {} }
+  function renderLock() {
+    var b = loadBest();
+    [4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 23].forEach(function (lv) {
+      var el = $('best' + lv), cost = COSTS[lv];
+      $('lv' + lv).classList.toggle('locked', !unlocked[lv]);
+      if (lv === 23) {
+        if (unlocked[23]) el.textContent = b[23] != null ? 'Лучший результат: ' + b[23] + ' из 100' : 'Лучший результат: пока нет';
+        else if (coins >= CHAL_COST && kud >= CHAL_COST) el.textContent = 'Закрыт. Нажми, чтобы открыть за 1200 монет и 1200 кудриков';
+        else el.textContent = 'Закрыт. Нужно 1200 монет и 1200 кудриков' + (coins < CHAL_COST ? ', не хватает монет: ' + (CHAL_COST - coins) : '') + (kud < CHAL_COST ? ', не хватает кудриков: ' + (CHAL_COST - kud) : '');
+      } else if (unlocked[lv] && lv === 8) {
+        el.textContent = 'Открыт. Нажми, чтобы настроить свой уровень';
+      } else if (unlocked[lv] && lv === 13) {
+        el.textContent = b[13] != null ? 'Лучший результат: ' + b[13] + ' из 10' : 'Открыт. 50 монет за верный ответ';
+      } else if (unlocked[lv] && lv === 12) {
+        el.textContent = b[12] != null ? 'Рекорд: ' + b[12] + ' решено' : 'Рекорд: пока нет';
+      } else if (unlocked[lv]) {
+        el.textContent = b[lv] != null ? 'Лучший результат: ' + b[lv] + ' из 10' : 'Лучший результат: пока нет';
+      } else if (coins >= cost) {
+        el.textContent = 'Закрыт. Нажми, чтобы открыть за ' + cost + ' монет';
+      } else {
+        el.textContent = 'Закрыт. Нужно ' + cost + ' монет, не хватает ' + (cost - coins);
+      }
+    });
+  }
+  var ARTIFACT_COST = 3400, MATH_COST = 1340, HELPER_COST = 1240, HC_COST = 1000, TURBO_COST = 2450;
+  function renderShop() {
+    var btn = $('artBuy'), owned = !!unlocked.artifact;
+    $('artChip').hidden = !owned;
+    if (owned) {
+      btn.textContent = 'Куплено';
+      btn.disabled = true;
+    } else if (coins >= ARTIFACT_COST) {
+      btn.textContent = 'Купить за ' + ARTIFACT_COST + ' монет';
+      btn.disabled = false;
+    } else {
+      btn.textContent = 'Не хватает ' + (ARTIFACT_COST - coins) + ' монет';
+      btn.disabled = true;
+    }
+    var tb = $('turboBuy');
+    if (unlocked.turbo) { tb.textContent = 'Куплено'; tb.disabled = true; }
+    else if (coins >= TURBO_COST) { tb.textContent = 'Купить за ' + TURBO_COST + ' монет'; tb.disabled = false; }
+    else { tb.textContent = 'Не хватает ' + (TURBO_COST - coins) + ' монет'; tb.disabled = true; }
+    var cb = $('hcBuy');
+    if (unlocked.hardcore) {
+      cb.textContent = 'Куплено';
+      cb.disabled = true;
+    } else if (coins >= HC_COST) {
+      cb.textContent = 'Купить за ' + HC_COST + ' монет';
+      cb.disabled = false;
+    } else {
+      cb.textContent = 'Не хватает ' + (HC_COST - coins) + ' монет';
+      cb.disabled = true;
+    }
+    var hb = $('helperBuy');
+    if (unlocked.helper) {
+      hb.textContent = 'Куплено';
+      hb.disabled = true;
+    } else if (coins >= HELPER_COST) {
+      hb.textContent = 'Купить за ' + HELPER_COST + ' монет';
+      hb.disabled = false;
+    } else {
+      hb.textContent = 'Не хватает ' + (HELPER_COST - coins) + ' монет';
+      hb.disabled = true;
+    }
+    var mb = $('mathBuy');
+    if (unlocked.math) {
+      mb.textContent = 'Куплено';
+      mb.disabled = true;
+    } else if (coins >= MATH_COST) {
+      mb.textContent = 'Купить за ' + MATH_COST + ' монет';
+      mb.disabled = false;
+    } else {
+      mb.textContent = 'Не хватает ' + (MATH_COST - coins) + ' монет';
+      mb.disabled = true;
+    }
+  }
+  var CHAL_COST = 1200;
+  function tryLevel(lv) {
+    if (unlocked[lv]) {
+      if (lv === 8) openBuilder(); else startLevel(lv);
+      return;
+    }
+    if (lv === 23) {
+      if (coins >= CHAL_COST && kud >= CHAL_COST) {
+        coins -= CHAL_COST; kud -= CHAL_COST;
+        unlocked[23] = true;
+        saveCoins(); saveKud(); saveUnlocked();
+        renderCoins();
+      } else {
+        renderLock();
+      }
+      return;
+    }
+    if (coins >= COSTS[lv]) {
+      coins -= COSTS[lv];
+      unlocked[lv] = true;
+      saveCoins();
+      saveUnlocked();
+      renderCoins();
+    } else {
+      renderLock();
+    }
+  }
+  function exAmount() {
+    var v = parseInt($('exAmount').value, 10);
+    return isNaN(v) || v < 1 ? 0 : Math.min(9999999, v);
+  }
+  function renderExchange() {
+    var n = exAmount();
+    $('exInfo').textContent = n === 0 ? 'Введи, сколько монет взять'
+      : kud >= n ? 'Возьмёшь ' + n + ' монет, заплатишь ' + n + ' кудриков'
+      : 'Возьмёшь ' + n + ' монет, заплатишь ' + n + ' кудриков. Не хватает ' + (n - kud);
+    $('exBuy').disabled = n === 0 || kud < n;
+  }
+  /* cups: rating points earned at the end of a round by the number of correct answers */
+  var CUP_MAX = 100000;
+  var LEAGUES = [
+    { n: 'Бронза', at: 0, c: '#CD7F32' },
+    { n: 'Серебро', at: 5000, c: '#B8C2CC' },
+    { n: 'Золото', at: 15000, c: '#F2C230' },
+    { n: 'Алмаз', at: 25000, c: '#4FC3F7' },
+    { n: 'Рубин', at: 35000, c: '#F0546A' },
+    { n: 'Изумруд', at: 45000, c: '#3DDC84' },
+    { n: 'Мифическая', at: 55000, c: '#E040FB' },
+    { n: 'Легендарная', at: 65000, c: '#FF7043' },
+    { n: 'Мастер', at: 75000, c: '#8C9EFF' },
+    { n: 'Слава', at: 85000, c: '#FFD740' }
+  ];
+  function leagueIndex(t) { var i = 0; LEAGUES.forEach(function (x, k) { if (t >= x.at) i = k; }); return i; }
+  var CUP_TABLE = [0, 1, 3, 5, 7, 10, 13, 15, 17, 19, 20];
+  var cups = { total: 0, correct: 0, rounds: 0 };
+  try { var cs = JSON.parse(localStorage.getItem('schet-cups') || 'null'); if (cs && typeof cs.total === 'number') cups = cs; } catch (e) {}
+  function saveCups() { try { localStorage.setItem('schet-cups', JSON.stringify(cups)); } catch (e) {} }
+  function renderCups() {
+    cups.total = Math.min(CUP_MAX, cups.total);
+    $('cupTotal').textContent = cups.total;
+    var li = leagueIndex(cups.total), L = LEAGUES[li], nx = LEAGUES[li + 1];
+    $('leagueName').textContent = L.n;
+    $('leagueName').style.color = L.c;
+    $('leagueFill').style.background = L.c;
+    $('leagueFill').style.width = Math.round((cups.total - L.at) / ((nx ? nx.at : CUP_MAX) - L.at) * 100) + '%';
+    $('leagueNext').textContent = nx ? 'До «' + nx.n + '»: ' + (nx.at - cups.total) : 'До максимума: ' + (CUP_MAX - cups.total);
+    $('openCups').textContent = 'Кубки ' + cups.total + ' · ' + L.n;
+    var lh = '';
+    LEAGUES.forEach(function (x, i) {
+      lh += '<li' + (i <= li ? ' class="reached"' : '') + '><span style="color:' + x.c + '">' + x.n + '</span><b>' + x.at + '</b></li>';
+    });
+    $('leagueList').innerHTML = lh;
+    var h = '';
+    for (var i = 10; i >= 0; i--) h += '<li><span>' + i + ' из 10</span><b>' + (CUP_TABLE[i] > 0 ? '+' : '') + CUP_TABLE[i] + '</b></li>';
+    $('cupTable').innerHTML = h;
+  }
+  /* collection: grey symbols that are knocked out of boxes bought for kudriks */
+  var COLL_ITEMS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '+', '−', '?', '=', '*', '×', '÷', '√', 'π', '%', '!', 'y', '²', '^', '{}'];
+  var BOX_PRICE = 5000, BOX_SIZE = 5;
+  var DROP = { '1': 90, '2': 80, '3': 75, '4': 50, '5': 51, '6': 45, '7': 45, '8': 30, '9': 25, '0': 20, '+': 15, '−': 10, '×': 9.45, '÷': 7.12, '√': 6, 'π': 3.1, '?': 5.45, '*': 6.99, '=': 6.23, '%': 5.99, '!': 5.34, 'y': 4.99, '²': 2.99, '^': 2.45, '{}': 1 };
+  var JUNK_CHANCE = 90;
+  function fmtPct(v) { return String(v).replace('.', ',') + '%'; }
+  var coll = {};
+  try { coll = JSON.parse(localStorage.getItem('schet-coll') || '{}') || {}; } catch (e) { coll = {}; }
+  function saveColl() { try { localStorage.setItem('schet-coll', JSON.stringify(coll)); } catch (e) {} }
+  function renderColl() {
+    var h = '', n = 0;
+    COLL_ITEMS.forEach(function (c) {
+      var k = coll[c] || 0; if (k) n++;
+      h += '<div class="collcell' + (k ? ' got' : '') + '">' + c + (k > 1 ? '<i>×' + k + '</i>' : '') + '</div>';
+    });
+    $('collGrid').innerHTML = h;
+    $('collCount').textContent = n + '';
+    $('collTotal').textContent = COLL_ITEMS.length;
+    $('collJunk').textContent = coll.junk || 0;
+    var dl = '<li><span>🗑 Мусор</span><b>' + fmtPct(JUNK_CHANCE) + '</b></li>';
+    COLL_ITEMS.forEach(function (c) { dl += '<li><span>' + c + '</span><b>' + (DROP[c] == null ? 'шанс не задан' : fmtPct(DROP[c])) + '</b></li>'; });
+    $('dropList').innerHTML = dl;
+    $('boxBuy').disabled = kud < BOX_PRICE;
+    $('boxBuy').textContent = kud < BOX_PRICE ? 'Не хватает кудриков: ' + (BOX_PRICE - kud) : 'Купить и открыть';
+  }
+  function openBox() {
+    if (kud < BOX_PRICE) { renderColl(); return; }
+    kud -= BOX_PRICE; saveKud();
+    /* every item rolls its own chance once per box; the box holds at most 5 items */
+    var won = [];
+    Object.keys(DROP).forEach(function (c) { if (Math.random() * 100 < DROP[c]) won.push(c); });
+    /* when more than 5 win, the rarest ones are kept so rare drops keep their real chance */
+    won.sort(function (x, y) { return DROP[x] - DROP[y]; });
+    if (Math.random() * 100 < JUNK_CHANCE) won.push('🗑');
+    var got = won.slice(0, BOX_SIZE), isNew = 0;
+    while (got.length < BOX_SIZE) got.push('🗑');
+    got.forEach(function (c) {
+      if (c === '🗑') { coll.junk = (coll.junk || 0) + 1; return; }
+      if (!coll[c]) isNew++;
+      coll[c] = (coll[c] || 0) + 1;
+    });
+    saveColl();
+    $('boxRes').innerHTML = got.map(function (c) { return '<span>' + c + '</span>'; }).join('');
+    var junkN = got.filter(function (c) { return c === '🗑'; }).length;
+    $('boxMsg').textContent = 'В боксе 5 предметов, мусора: ' + junkN + ', новых символов: ' + isNew + '.';
+    renderCoins();
+  }
+  function renderCoins() {
+    $('wallet').textContent = coins;
+    $('kudWallet').textContent = kud;
+    $('exKud').textContent = kud;
+    renderExchange();
+    renderCups();
+    renderColl();
+    $('aKud').textContent = kud;
+    $('roundCoins').textContent = '+' + roundCoins;
+    $('aCoins').textContent = coins;
+    $('aArt').textContent = unlocked.artifact ? 'Артефакт: забрать' : 'Артефакт: выдать';
+    $('aMath').textContent = unlocked.math ? 'Математик: забрать' : 'Математик: выдать';
+    $('aHelper').textContent = unlocked.helper ? 'Помощник: забрать' : 'Помощник: выдать';
+    if (!unlocked.hardcore) hardcoreOn = false;
+    var ht = $('hcToggle');
+    ht.hidden = !unlocked.hardcore;
+    ht.classList.toggle('on', hardcoreOn);
+    ht.textContent = hardcoreOn ? 'Хардкор: вкл' : 'Хардкор: выкл';
+    $('aHc').textContent = unlocked.hardcore ? 'Хардкор: забрать' : 'Хардкор: выдать';
+    var ab = $('openAdmin');
+    if (unlocked.admin) ab.textContent = 'Админ панель';
+    else if (coins >= 47060) ab.textContent = 'Купить админ панель за 47060';
+    else ab.textContent = 'Админ панель: нужно 47060 (не хватает ' + (47060 - coins) + ')';
+    renderLock();
+    renderShop();
+  }
+
+  /* custom level builder */
+  var CUSTOM = { ops: ['+', '×'], lo: 2, hi: 12 }, customMode = 'type', customSecs = 10;
+  try {
+    var savedCustom = JSON.parse(localStorage.getItem('schet-custom') || 'null');
+    if (savedCustom && savedCustom.ops && savedCustom.ops.length) {
+      CUSTOM = { ops: savedCustom.ops, lo: savedCustom.lo, hi: savedCustom.hi };
+      customMode = savedCustom.mode || 'type';
+      customSecs = savedCustom.secs || 10;
+    }
+  } catch (e) {}
+  function openBuilder() {
+    $('opAdd').checked = CUSTOM.ops.indexOf('+') >= 0;
+    $('opSub').checked = CUSTOM.ops.indexOf('−') >= 0;
+    $('opMul').checked = CUSTOM.ops.indexOf('×') >= 0;
+    $('opDiv').checked = CUSTOM.ops.indexOf('÷') >= 0;
+    $('numLo').value = CUSTOM.lo;
+    $('numHi').value = CUSTOM.hi;
+    $('secs').value = customSecs;
+    $('modeType').checked = customMode === 'type';
+    $('mode3').checked = customMode === '3';
+    $('mode6').checked = customMode === '6';
+    $('bmsg').textContent = '';
+    show('builder');
+  }
+  function playCustom() {
+    var ops = [];
+    if ($('opAdd').checked) ops.push('+');
+    if ($('opSub').checked) ops.push('−');
+    if ($('opMul').checked) ops.push('×');
+    if ($('opDiv').checked) ops.push('÷');
+    if (!ops.length) { $('bmsg').textContent = 'Выбери хотя бы одно действие.'; return; }
+    var lo = parseInt($('numLo').value, 10), hi = parseInt($('numHi').value, 10), secs = parseInt($('secs').value, 10);
+    if (isNaN(lo) || isNaN(hi)) { $('bmsg').textContent = 'Впиши числа, например от 2 до 12.'; return; }
+    lo = Math.min(99, Math.max(1, lo));
+    hi = Math.min(99, Math.max(lo, hi));
+    if (isNaN(secs)) secs = 10;
+    secs = Math.min(60, Math.max(3, secs));
+    var mode = $('mode6').checked ? '6' : ($('mode3').checked ? '3' : 'type');
+    CUSTOM = { ops: ops, lo: lo, hi: hi };
+    customMode = mode;
+    customSecs = secs;
+    try { localStorage.setItem('schet-custom', JSON.stringify({ ops: ops, lo: lo, hi: hi, mode: mode, secs: secs })); } catch (e) {}
+    LEVELS[8] = { sec: secs, title: 'Свой уровень', noReward: true };
+    if (mode !== 'type') { LEVELS[8].choice = true; LEVELS[8].n = mode === '6' ? 6 : 3; }
+    startLevel(8);
+  }
+
+  /* best scores */
+  function loadBest() {
+    try { return JSON.parse(localStorage.getItem('schet-best') || '{}') || {}; } catch (e) { return {}; }
+  }
+  function saveBest(lv, score) {
+    var b = loadBest();
+    if (b[lv] == null || score > b[lv]) b[lv] = score;
+    try { localStorage.setItem('schet-best', JSON.stringify(b)); } catch (e) {}
+    return b[lv];
+  }
+  function renderBest() {
+    var b = loadBest();
+    [1, 2, 3, 5, 9, 18, 19, 20, 21, 22].forEach(function (lv) {
+      $('best' + lv).textContent = b[lv] != null ? 'Лучший результат: ' + b[lv] + ' из ' + totalOf(lv) : 'Лучший результат: пока нет';
+    });
+    $('best12').textContent = b[12] != null ? 'Рекорд: ' + b[12] + ' решено' : 'Рекорд: пока нет';
+    renderLock();
+  }
+
+  function show(which) {
+    menu.hidden = which !== 'menu';
+    play.hidden = which !== 'play';
+    result.hidden = which !== 'result';
+    $('shop').hidden = which !== 'shop';
+    $('modePick').hidden = which !== 'modePick';
+    $('tutorial').hidden = which !== 'tutorial';
+    $('tasks').hidden = which !== 'tasks';
+    $('admin').hidden = which !== 'admin';
+    $('duelSetup').hidden = which !== 'duelSetup';
+    $('duelHand').hidden = which !== 'duelHand';
+    $('duelRes').hidden = which !== 'duelRes';
+    $('builder').hidden = which !== 'builder';
+    $('examples').hidden = which !== 'examples';
+    $('account').hidden = which !== 'account';
+    $('coll').hidden = which !== 'coll';
+    $('cups').hidden = which !== 'cups';
+    $('leaders').hidden = which !== 'leaders';    window.scrollTo(0, 0);
+  }
+
+  function renderDots() {
+    var html = '';
+    var endlessMode = !!LEVELS[level].endless;
+    var dotsN = totalOf(level);
+    dotsEl.style.gridTemplateColumns = 'repeat(' + (dotsN > 40 ? 20 : dotsN > 10 ? 17 : 10) + ', 1fr)';
+    for (var i = 0; i < dotsN; i++) {
+      var cls = 'dot';
+      if (endlessMode) {
+        if (i < mistakes) cls += ' no';
+        html += '<span class="' + cls + '"></span>';
+        continue;
+      }
+      if (results[i]) cls += results[i].ok ? ' ok' : ' no';
+      else if (i === idx) cls += ' now';
+      html += '<span class="' + cls + '"></span>';
+    }
+    dotsEl.innerHTML = html;
+  }
+
+  function renderAnswer() {
+    answerEl.textContent = typed.replace('-', '−');
+  }
+
+  var turboOn = false, modePrompting = false, pendingLevel = null;
+  function startLevel(lv) {
+    if (unlocked.turbo && !modePrompting && lv !== 15) { pendingLevel = lv; $('modeHardcore').hidden = !unlocked.hardcore; show('modePick'); return; }
+    modePrompting = false;
+    level = lv;
+    questions = lv === 12 ? [] : makeSet(lv);
+    idx = 0;
+    results = [];
+    mistakes = 0;
+    roundCoins = 0;
+    mathUsed = false;
+    helperUsed = false;
+    renderCoins();
+    clearTimeout(timer);
+    show('play');
+    var sp = lv === 8 ? customSplash() : SPLASH[lv];
+    if (sp) {
+      if (turboOn) sp = { n: sp.n, t: sp.t, x: 'Турбо: 5 секунд на вопрос', cls: sp.cls }; else if (hardcoreOn) sp = { n: sp.n, t: sp.t, x: 'Хардкор: ' + HC_SECONDS + ' секунд на пример', cls: sp.cls };
+      running = false;
+      locked = true;
+      cancelAnimationFrame(raf);
+      $('sn').textContent = sp.n;
+      $('st').textContent = sp.t;
+      $('sx').textContent = sp.x;
+      $('splash').className = sp.cls || '';
+      $('splash').hidden = false;
+      timer = setTimeout(function () {
+        $('splash').hidden = true;
+        showQuestion();
+      }, 2000);
+    } else {
+      showQuestion();
+    }
+  }
+
+  function showQuestion() {
+    if (level === 12 && !questions[idx]) questions[idx] = makeQuestion(12);
+    var q = questions[idx];
+    typed = '';
+    locked = false;
+    problemEl.className = 'problem' + (q.kind ? ' ' + q.kind : '');
+    problemEl.textContent = (q.kind && q.kind !== 'expr') ? q.text : q.text + ' =';
+    if (level === 15) {
+      countEl.textContent = duel.names[duel.p] + ': пример ' + (idx + 1) + ' из ' + TOTAL;
+    } else if (LEVELS[level].endless) {
+      var solvedNow = results.filter(function (r) { return r && r.ok; }).length;
+      countEl.textContent = 'Решено ' + solvedNow + ', ошибок ' + mistakes + ' из ' + MAX_MISTAKES;
+    } else {
+      countEl.textContent = 'Пример ' + (idx + 1) + ' из ' + totalOf(level);
+    }
+    answerEl.className = 'answer';
+    statusEl.className = 'status';
+    statusEl.textContent = '';
+    renderAnswer();
+    renderDots();
+    curCfg = LEVELS[q.lv || level];
+    var isChoice = !!curCfg.choice;
+    $('sub').hidden = true;
+    $('pad').hidden = isChoice;
+    $('negKey').hidden = !curCfg.neg;
+    choicesEl.hidden = !isChoice;
+    if (isChoice) {
+      var n = curCfg.n || 3;
+      currentOpts = curCfg === LEVELS[2] ? makeTrapOptions(q) : makeOptions(q.ans, n);
+      if (curCfg === LEVELS[2]) {
+        /* the example is shown solved with a wrong result; the player picks the right one */
+        var wrong;
+        do { wrong = q.ans + rand(-20, 20); } while (wrong <= 0 || wrong === q.ans || currentOpts.indexOf(wrong) >= 0);
+        problemEl.textContent = q.text + ' = ' + wrong;
+        $('sub').hidden = false;
+      }
+      Array.prototype.forEach.call(choicesEl.children, function (b, i) {
+        b.hidden = i >= n;
+        b.textContent = i < n ? currentOpts[i] : '';
+        b.className = 'choice';
+      });
+    }
+    $('hint').hidden = !unlocked.artifact || level === 15;
+    var mbtn = $('mathBtn');
+    mbtn.hidden = !unlocked.math || level === 15;
+    mbtn.disabled = mathUsed;
+    mbtn.textContent = mathUsed ? 'Математик уже помог в этой игре' : 'Математик: решить пример';
+    var hbtn = $('helperBtn');
+    hbtn.hidden = !(unlocked.helper && q.half);
+    hbtn.disabled = helperUsed;
+    hbtn.textContent = helperUsed ? 'Помощник уже помог в этой игре' : 'Помощник: решить скобку';
+    total = ((turboOn && level !== 15) ? 5 : (hardcoreOn && level !== 15) ? HC_SECONDS : (LEVELS[level].total ? LEVELS[level].sec : curCfg.sec)) * 1000;
+    deadline = performance.now() + total;
+    running = true;
+    cancelAnimationFrame(raf);
+    tick();
+  }
+
+  function tick() {
+    if (!running) return;
+    var left = deadline - performance.now();
+    if (left <= 0) { submit(null); return; }
+    bar.style.transform = 'scaleX(' + (left / total) + ')';
+    timeEl.textContent = (left / 1000).toFixed(1);
+    var low = left <= 2000;
+    bar.classList.toggle('low', low);
+    timeEl.classList.toggle('low', low);
+    raf = requestAnimationFrame(tick);
+  }
+
+  function submit(given) {
+    if (locked) return;
+    locked = true;
+    running = false;
+    cancelAnimationFrame(raf);
+    if (level === 15) {
+      var spent = given === null ? total : Math.min(total, total - Math.max(0, deadline - performance.now()));
+      duelTime += spent / 1000;
+    }
+    var q = questions[idx];
+    var ok = given === q.ans;
+    results[idx] = { q: q.text, ans: q.ans, given: given, ok: ok };
+    if (!ok && LEVELS[level].endless) mistakes++;
+    renderDots();
+    if (given !== null) answerEl.textContent = given;
+    if (curCfg.choice) {
+      Array.prototype.forEach.call(choicesEl.children, function (b, i) {
+        if (currentOpts[i] === q.ans) b.className = 'choice right';
+        else if (currentOpts[i] === given) b.className = 'choice wrong';
+      });
+    }
+    if (ok) {
+      var reward = LEVELS[level].noReward ? 0 : (LEVELS[level].reward || REWARD);
+      coins += reward;
+      roundCoins += reward;
+      if (reward) { kud += 100; saveKud(); }
+      saveCoins();
+      renderCoins();
+      answerEl.className = 'answer ok';
+      statusEl.className = 'status ok';
+      statusEl.textContent = reward ? 'Верно, +' + reward + ' монет' : 'Верно';
+    } else {
+      answerEl.className = 'answer no';
+      statusEl.className = 'status no';
+      statusEl.textContent = (given === null ? 'Время вышло. ' : 'Неверно. ') + 'Ответ: ' + q.ans;
+    }
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      idx++;
+      var over = LEVELS[level].endless ? mistakes >= MAX_MISTAKES : idx >= totalOf(level);
+      if (over) { if (level === 15) finishDuelRound(); else finish(); } else showQuestion();
+    }, ok ? 350 : 1300);
+  }
+
+  function press(k) {
+    if (locked || !running) return;
+    if (k === 'back') { typed = typed.slice(0, -1); renderAnswer(); return; }
+    if (k === 'neg') {
+      if (!curCfg.neg) return;
+      typed = typed.charAt(0) === '-' ? typed.slice(1) : '-' + typed;
+      renderAnswer();
+      return;
+    }
+    if (k === 'ok') {
+      var typedVal = parseInt(typed, 10);
+      if (isNaN(typedVal)) return;
+      submit(typedVal);
+      return;
+    }
+    if (typed.replace('-', '').length >= 4) return;
+    typed += k;
+    renderAnswer();
+    if (parseInt(typed, 10) === questions[idx].ans) submit(parseInt(typed, 10));
+  }
+
+  function finish() {
+    running = false;
+    markDayTaskLevel(level);
+    var score = results.filter(function (r) { return r.ok; }).length;
+    var best = LEVELS[level].noReward ? null : saveBest(level, score);
+    var cupGain = 0;
+    if (!LEVELS[level].noReward && !LEVELS[level].endless) { cupGain = CUP_TABLE[Math.min(10, Math.round(score / totalOf(level) * 10))]; cups.total = Math.min(CUP_MAX, cups.total + cupGain); cups.rounds++; saveCups(); renderCups(); }
+    renderBest();
+    var endlessRun = !!LEVELS[level].endless;
+    $('rtitle').textContent = endlessRun ? 'Игра окончена' : LEVELS[level].title + ' пройден';
+    $('rscore').textContent = score;
+    $('rof').textContent = endlessRun ? 'решено' : 'из ' + totalOf(level);
+    var note;
+    if (endlessRun) note = 'Ты сделал ' + MAX_MISTAKES + ' ошибок, поэтому игра закончилась.';
+    else if (score === totalOf(level)) note = 'Без единой ошибки.';
+    else if (score / totalOf(level) >= 0.8) note = 'Очень хороший результат.';
+    else if (score / totalOf(level) >= 0.5) note = 'Неплохо. Ещё одна попытка, и будет лучше.';
+    else note = 'Сложно получилось. Попробуй ещё раз.';
+    if (endlessRun) $('rnote').textContent = note + ' Рекорд: ' + best + '.';
+    else $('rnote').textContent = note + (best != null ? ' Лучший результат на этом уровне: ' + best + ' из ' + totalOf(level) + '.' : '');
+    $('rcoins').textContent = LEVELS[level].noReward
+      ? 'На этом уровне монеты не начисляются.'
+      : 'Заработано: +' + roundCoins + ' монет. Всего: ' + coins + '.' + (LEVELS[level].endless ? '' : ' Кубки: +' + cupGain + ', всего ' + cups.total + '.');
+    var html = '';
+    (endlessRun ? results.filter(function (r) { return r && !r.ok; }) : results).forEach(function (r) {
+      var right = r.ok ? '<span class="res ok">верно</span>'
+        : '<span class="res no">' + (r.given === null ? 'не успел' : 'ты: ' + r.given) + ', надо ' + r.ans + '</span>';
+      html += '<li><span class="q">' + r.q.replace(/\n/g, '; ') + '</span>' + right + '</li>';
+    });
+    $('rlist').innerHTML = html;
+    $('next').hidden = level >= 4 || (level === 3 && !unlocked[4]);
+    $('next').textContent = 'Перейти на уровень ' + (level + 1);
+    show('result');
+  }
+
+  /* events */
+  $('lv18').addEventListener('click', function () { tryLevel(18); });
+  $('lv19').addEventListener('click', function () { tryLevel(19); });
+  $('lv20').addEventListener('click', function () { tryLevel(20); });
+  $('lv21').addEventListener('click', function () { startLevel(21); });
+  $('lv22').addEventListener('click', function () { startLevel(22); });
+  $('lv23').addEventListener('click', function () { tryLevel(23); });
+  $('lv1').addEventListener('click', function () { startLevel(1); });
+  $('lv2').addEventListener('click', function () { startLevel(2); });
+  $('lv3').addEventListener('click', function () { startLevel(3); });
+  $('lv5').addEventListener('click', function () { startLevel(5); });
+  $('lv4').addEventListener('click', function () { tryLevel(4); });
+  $('lv6').addEventListener('click', function () { tryLevel(6); });
+  $('lv7').addEventListener('click', function () { tryLevel(7); });
+  $('lv8').addEventListener('click', function () { tryLevel(8); });
+  $('lv9').addEventListener('click', function () { tryLevel(9); });
+  $('lv10').addEventListener('click', function () { tryLevel(10); });
+  $('lv11').addEventListener('click', function () { tryLevel(11); });
+  $('lv12').addEventListener('click', function () { tryLevel(12); });
+  $('lv13').addEventListener('click', function () { tryLevel(13); });
+  $('lv14').addEventListener('click', function () { tryLevel(14); });
+  $('lv16').addEventListener('click', function () { tryLevel(16); });
+  $('lv17').addEventListener('click', function () { tryLevel(17); });
+  $('openShop').addEventListener('click', function () { show('shop'); });
+  $('shopback').addEventListener('click', function () { show('menu'); });
+  $('hint').addEventListener('click', function () {
+    if (locked || !running) return;
+    statusEl.className = 'status hint';
+    var hintAns = questions[idx].ans;
+    statusEl.textContent = (hintAns < 0 ? 'Ответ отрицательный. ' : '') + 'Первая цифра ответа: ' + String(Math.abs(hintAns)).charAt(0);
+  });
+  $('mathBtn').addEventListener('click', function () {
+    if (locked || !running || mathUsed) return;
+    mathUsed = true;
+    this.disabled = true;
+    this.textContent = 'Математик уже помог в этой игре';
+    submit(questions[idx].ans);
+  });
+  $('helperBtn').addEventListener('click', function () {
+    var hq = questions[idx];
+    if (locked || !running || helperUsed || !hq || !hq.half) return;
+    helperUsed = true;
+    this.disabled = true;
+    this.textContent = 'Помощник уже помог в этой игре';
+    problemEl.textContent = hq.half + ' =';
+    statusEl.className = 'status hint';
+    statusEl.textContent = 'Помощник решил скобку';
+  });
+
+  $('turboBuy').addEventListener('click', function () {
+    if (unlocked.turbo || coins < TURBO_COST) return;
+    coins -= TURBO_COST; unlocked.turbo = true; saveCoins(); saveUnlocked(); renderCoins();
+  });
+  $('modeNormal').addEventListener('click', function () { turboOn = false; hardcoreOn = false; saveHardcore(); modePrompting = true; startLevel(pendingLevel); });
+  $('modeHardcore').addEventListener('click', function () { if (!unlocked.hardcore) return; turboOn = false; hardcoreOn = true; saveHardcore(); modePrompting = true; startLevel(pendingLevel); });
+  $('modeTurbo').addEventListener('click', function () { if (!unlocked.turbo) return; turboOn = true; hardcoreOn = false; saveHardcore(); modePrompting = true; startLevel(pendingLevel); });
+  $('modeCancel').addEventListener('click', function () { pendingLevel = null; show('menu'); });
+
+  $('hcBuy').addEventListener('click', function () {
+    if (unlocked.hardcore || coins < HC_COST) return;
+    coins -= HC_COST;
+    unlocked.hardcore = true;
+    saveCoins();
+    saveUnlocked();
+    renderCoins();
+  });
+  $('hcToggle').addEventListener('click', function () {
+    hardcoreOn = !hardcoreOn;
+    saveHardcore();
+    renderCoins();
+  });
+  $('helperBuy').addEventListener('click', function () {
+    if (unlocked.helper || coins < HELPER_COST) return;
+    coins -= HELPER_COST;
+    unlocked.helper = true;
+    saveCoins();
+    saveUnlocked();
+    renderCoins();
+  });
+  $('mathBuy').addEventListener('click', function () {
+    if (unlocked.math || coins < MATH_COST) return;
+    coins -= MATH_COST;
+    unlocked.math = true;
+    saveCoins();
+    saveUnlocked();
+    renderCoins();
+  });
+  $('artBuy').addEventListener('click', function () {
+    if (unlocked.artifact || coins < ARTIFACT_COST) return;
+    coins -= ARTIFACT_COST;
+    unlocked.artifact = true;
+    saveCoins();
+    saveUnlocked();
+    renderCoins();
+  });
+  $('bback').addEventListener('click', function () { renderBest(); show('menu'); });
+  $('bplay').addEventListener('click', playCustom);
+  $('again').addEventListener('click', function () { startLevel(level); });
+  $('next').addEventListener('click', function () { startLevel(level + 1); });
+  $('tomenu').addEventListener('click', function () { renderBest(); show('menu'); });
+  $('pad').addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (b) press(b.getAttribute('data-k'));
+  });
+  choicesEl.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b || locked || !running) return;
+    submit(currentOpts[parseInt(b.getAttribute('data-i'), 10)]);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (play.hidden) return;
+    if (curCfg.choice) {
+      if (e.key >= '1' && e.key <= String(curCfg.n || 3) && !locked && running) { submit(currentOpts[parseInt(e.key, 10) - 1]); e.preventDefault(); }
+      return;
+    }
+    if (e.key >= '0' && e.key <= '9') { press(e.key); e.preventDefault(); }
+    else if (e.key === '-' && curCfg.neg) { press('neg'); e.preventDefault(); }
+    else if (e.key === 'Backspace') { press('back'); e.preventDefault(); }
+    else if (e.key === 'Enter') { press('ok'); e.preventDefault(); }
+  });
+
+  /* tutorial */
+  var STEPS = [
+    { t: 'Как играть', x: 'Тебе показывают пример, а ты решаешь его в уме. На каждый пример дают немного времени. Не успел, и пример засчитывается как ошибка. В каждом уровне 10 примеров.' },
+    { t: 'Ввод ответа', x: 'На части уровней ответ нужно набрать цифрами. Как только число верное, ответ засчитывается сам. Ошибся в цифре, нажми «Стереть». Кнопка «Ответ» отправляет то, что набрано. На уровне с отрицательными числами есть кнопка «Минус», она ставит знак перед ответом.' },
+    { t: 'Выбор из вариантов', x: 'На других уровнях нужно нажать правильный ответ среди нескольких кнопок. На уровне 2 пример показан уже решённым, но с ошибкой. Найди правильный ответ. Попробуй:', demo: true },
+    { t: 'Монеты', x: 'За каждый правильный ответ ты получаешь 100 монет. Они показаны в меню и сохраняются на этом телефоне.' },
+    { t: 'Закрытые уровни и магазин', x: 'Уровни 4, 6, 7, 8, 9, 10, 11, «Свой уровень», «Бесконечный режим» и «Лёгкий режим» закрыты. Нажми на карточку, чтобы открыть её за монеты: уровень 4 стоит 200, уровень 6 стоит 1200, уровень 7 стоит 1000, уровень 8 стоит 1500, уровень 9 стоит 1800, уровень 10 стоит 2000, бесконечный режим 3000, лёгкий режим 100 (за верный ответ в нём дают 50 монет), уровень 11 стоит 3000, свой уровень 1000. Админ панель открывается за 10000 монет. В магазине за 1340 монет можно нанять математика: он один раз за игру решает за тебя один пример. За 1240 монет можно нанять помощника: на уровне 10 он один раз за игру решает половину длинного примера, то есть считает скобку за тебя. Хардкор режим стоит 1000 монет: после покупки его можно включить в меню, и на каждом уровне на пример дают 11 секунд. В магазине за 3400 монет продаётся артефакт: во время игры он подсказывает первую цифру ответа. В «Своём уровне» ты сам выбираешь действия, числа и время, но монеты там не начисляются.' }
+  ];
+  STEPS.push({ t: 'Бесконечный режим', x: 'Примеры идут без конца и с каждым верным ответом становятся сложнее. Игра заканчивается, когда ты сделал 10 ошибок. Не успел вовремя, тоже считается ошибкой. Решай как можно больше: результат запоминается как рекорд.' });
+  STEPS.push({ t: 'Дуэль', x: 'В дуэли двое играют на одном телефоне. Каждый по очереди решает одни и те же 10 примеров. Побеждает тот, кто решил больше. Если поровну, побеждает тот, кто был быстрее. Монеты в дуэли не начисляются, а купленные помощники не работают.' });
+  var tstep = 0;
+  function tutorialDone() {
+    try { return localStorage.getItem('schet-tutorial-done') === '1'; } catch (e) { return false; }
+  }
+  function renderTutorial() {
+    var s = STEPS[tstep], d = '';
+    for (var i = 0; i < STEPS.length; i++) d += '<span class="tdot' + (i <= tstep ? ' on' : '') + '"></span>';
+    $('tdots').innerHTML = d;
+    $('ttitle').textContent = s.t;
+    $('ttext').textContent = s.x;
+    $('tdemo').hidden = !s.demo;
+    $('tfb').textContent = '';
+    $('tfb').className = 'status';
+    Array.prototype.forEach.call($('tch').children, function (b) { b.className = 'choice'; });
+    $('tback').hidden = tstep === 0;
+    $('tskip').hidden = tstep === STEPS.length - 1;
+    $('tnext').textContent = tstep === STEPS.length - 1 ? 'Начать играть' : 'Далее';
+  }
+  function openTutorial() { tstep = 0; renderTutorial(); show('tutorial'); }
+  function closeTutorial() {
+    try { localStorage.setItem('schet-tutorial-done', '1'); } catch (e) {}
+    renderBest();
+    show('menu');
+  }
+  $('openTut').addEventListener('click', openTutorial);
+  $('tnext').addEventListener('click', function () {
+    if (tstep >= STEPS.length - 1) closeTutorial(); else { tstep++; renderTutorial(); window.scrollTo(0, 0); }
+  });
+  $('tback').addEventListener('click', function () { if (tstep > 0) { tstep--; renderTutorial(); } });
+  $('tskip').addEventListener('click', closeTutorial);
+  $('tch').addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    var ok = b.getAttribute('data-v') === '42';
+    Array.prototype.forEach.call($('tch').children, function (x) { x.className = 'choice'; });
+    b.className = 'choice ' + (ok ? 'right' : 'wrong');
+    $('tfb').className = 'status ' + (ok ? 'ok' : 'no');
+    $('tfb').textContent = ok ? 'Верно: 6 × 7 = 42' : 'Не то. Посчитай ещё раз.';
+  });
+
+  /* duel: two players, same 10 examples, one phone */
+  var DUEL_PRESETS = {
+    easy: { lv: 13, sec: 15, text: 'Сложение и вычитание, 15 секунд на пример' },
+    mid: { lv: 1, sec: 7, text: 'Таблица умножения, 7 секунд на пример' },
+    hard: { lv: 9, sec: 10, text: 'Квадраты, 10 секунд на пример' }
+  };
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function duelBegin(names, preset) {
+    var pr = DUEL_PRESETS[preset];
+    duel = { names: names, preset: preset, questions: makeSet(pr.lv), p: 0, scores: [] };
+    LEVELS[15] = { sec: pr.sec, title: 'Дуэль', noReward: true };
+    startDuelRound();
+  }
+  function startDuelRound() {
+    level = 15;
+    questions = duel.questions;
+    idx = 0;
+    results = [];
+    mistakes = 0;
+    roundCoins = 0;
+    duelTime = 0;
+    renderCoins();
+    clearTimeout(timer);
+    show('play');
+    running = false;
+    locked = true;
+    cancelAnimationFrame(raf);
+    $('sn').textContent = duel.names[duel.p];
+    $('st').textContent = 'Дуэль';
+    $('sx').textContent = DUEL_PRESETS[duel.preset].text;
+    $('splash').className = 'dark';
+    $('splash').hidden = false;
+    timer = setTimeout(function () {
+      $('splash').hidden = true;
+      showQuestion();
+    }, 2000);
+  }
+  function finishDuelRound() {
+    running = false;
+    var correct = results.filter(function (r) { return r && r.ok; }).length;
+    duel.scores[duel.p] = { correct: correct, time: duelTime };
+    if (duel.p === 0) {
+      duel.p = 1;
+      $('dhTitle').textContent = 'Теперь очередь: ' + duel.names[1];
+      $('dhText').textContent = duel.names[0] + ' закончил. Передай телефон: ' + duel.names[1] + ' решает те же 10 примеров. Результат первого игрока пока скрыт.';
+      show('duelHand');
+      return;
+    }
+    var a = duel.scores[0], b = duel.scores[1], title;
+    if (a.correct !== b.correct) title = 'Победил ' + duel.names[a.correct > b.correct ? 0 : 1];
+    else if (Math.abs(a.time - b.time) > 0.05) title = 'Победил ' + duel.names[a.time < b.time ? 0 : 1] + ' (быстрее)';
+    else title = 'Ничья';
+    $('drTitle').textContent = title;
+    $('drList').innerHTML = [0, 1].map(function (i) {
+      return '<li><span class="q">' + esc(duel.names[i]) + '</span><span class="res ' + (duel.scores[i].correct >= 5 ? 'ok' : 'no') + '">' +
+        duel.scores[i].correct + ' из 10, ' + duel.scores[i].time.toFixed(1) + ' с</span></li>';
+    }).join('');
+    $('drNote').textContent = a.correct === b.correct
+      ? 'Верных ответов поровну, поэтому решило время.'
+      : 'Побеждает тот, кто решил больше примеров.';
+    show('duelRes');
+  }
+  $('lvDuel').addEventListener('click', function () { show('duelSetup'); });
+  $('dBack').addEventListener('click', function () { show('menu'); });
+  $('dStart').addEventListener('click', function () {
+    var n1 = $('dn1').value.trim() || 'Игрок 1', n2 = $('dn2').value.trim() || 'Игрок 2';
+    if (n1 === n2) n2 = n2 + ' (2)';
+    var preset = $('dpEasy').checked ? 'easy' : ($('dpHard').checked ? 'hard' : 'mid');
+    duelBegin([n1, n2], preset);
+  });
+  $('dhGo').addEventListener('click', function () { startDuelRound(); });
+  $('drAgain').addEventListener('click', function () { duelBegin(duel.names, duel.preset); });
+  $('drMenu').addEventListener('click', function () { renderBest(); show('menu'); });
+
+
+  // Local leaderboard (per browser/device).
+  var leaderName = '';
+  try { leaderName = localStorage.getItem('schet-player-name') || ''; } catch(e) {}
+  function renderLeaders() {
+    $('leaderName').value = leaderName;
+    var rows = [];
+    try { rows = JSON.parse(localStorage.getItem('schet-local-leaders') || '[]'); } catch(e) {}
+    if (leaderName) {
+      var found = false;
+      rows = rows.map(function(r){ if(r.name === leaderName){r.coins=coins;found=true;} return r; });
+      if (!found) rows.push({name:leaderName, coins:coins});
+    }
+    rows.sort(function(a,b){return b.coins-a.coins;});
+    $('leaderList').innerHTML = rows.length ? rows.map(function(r,i){
+      return '<li><span class="q">'+(i+1)+'. '+esc(r.name)+'</span><span class="res">'+Math.max(0,Number(r.coins)||0)+' 🪙</span></li>';
+    }).join('') : '<li>Пока нет игроков. Сохрани имя, чтобы начать.</li>';
+  }
+  $('openTasks').addEventListener('click',function(){show('tasks');selectTaskTab('daily');});
+  function localDayStamp(){
+    var d=new Date();
+    return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  }
+  function getDailyProgress(){
+    var today=localDayStamp(), data;
+    try { data=JSON.parse(localStorage.getItem('schet-day-task')||'null'); } catch(e) {}
+    if(!data || data.date!==today) data={date:today,done:{}};
+    return data;
+  }
+  function renderDayTask(){
+    var data=getDailyProgress();
+    var a=!!data.done[1], b=!!data.done[2];
+    $('taskText').innerHTML='<b>Пройди 1 и 2 уровень</b><p style="margin-top:10px">'+
+      (a?'✅':'⬜')+' Уровень 1 — '+(a?'пройден':'не пройден')+'<br>'+
+      (b?'✅':'⬜')+' Уровень 2 — '+(b?'пройден':'не пройден')+'</p>'+
+      (a&&b?'<p style="margin-top:10px;color:var(--good)">Задание выполнено! Оно исчезнет в 00:00.</p>':'<p style="margin-top:10px">Задание сбросится в 00:00.</p>');
+    $('taskContent').hidden=false;
+  }
+  function markDayTaskLevel(lv){
+    if(lv!==1 && lv!==2) return;
+    var data=getDailyProgress();
+    data.done[lv]=true;
+    try { localStorage.setItem('schet-day-task',JSON.stringify(data)); } catch(e) {}
+    if(!$('tasks').hidden && $('dayTasks').classList.contains('primary')) renderDayTask();
+  }
+  function selectTaskTab(which){
+    var daily=which==='daily';
+    $('taskTitle').textContent=daily?'Ежедневные задания':'Дневные задания';
+    $('taskText').textContent=daily?'Тут пока что нечего нет.':'';
+    $('dailyTasks').className='btn'+(daily?' primary':'');
+    $('dayTasks').className='btn'+(!daily?' primary':'');
+    if(!daily) renderDayTask();
+  }
+  var taskDateSeen=localDayStamp();
+  setInterval(function(){
+    var now=localDayStamp();
+    if(now!==taskDateSeen){ taskDateSeen=now; if(!$('tasks').hidden && $('dayTasks').classList.contains('primary')) renderDayTask(); }
+  },15000);
+  $('dailyTasks').addEventListener('click',function(){selectTaskTab('daily');});
+  $('dayTasks').addEventListener('click',function(){selectTaskTab('day');});
+  $('tasksBack').addEventListener('click',function(){show('menu');});
+  $('openExamples').addEventListener('click',function(){show('examples');});
+  $('examplesBack').addEventListener('click',function(){show('menu');});
+  $('openLeaders').addEventListener('click',function(){renderLeaders();show('leaders');});
+  $('leaderBack').addEventListener('click',function(){show('menu');});
+  $('saveLeaderName').addEventListener('click',function(){
+    leaderName=$('leaderName').value.trim().slice(0,16)||'Игрок';
+    try {
+      localStorage.setItem('schet-player-name',leaderName);
+      var rows=JSON.parse(localStorage.getItem('schet-local-leaders')||'[]');
+      var found=false; rows=rows.map(function(r){if(r.name===leaderName){r.coins=coins;found=true;}return r;});
+      if(!found) rows.push({name:leaderName,coins:coins});
+      localStorage.setItem('schet-local-leaders',JSON.stringify(rows));
+    } catch(e){}
+    renderLeaders();
+  });
+  var originalSaveCoins = saveCoins;
+  saveCoins = function(){
+    originalSaveCoins();
+    if(leaderName) {
+      try {
+        var rows=JSON.parse(localStorage.getItem('schet-local-leaders')||'[]'), found=false;
+        rows=rows.map(function(r){if(r.name===leaderName){r.coins=coins;found=true;}return r;});
+        if(!found) rows.push({name:leaderName,coins:coins});
+        localStorage.setItem('schet-local-leaders',JSON.stringify(rows));
+      } catch(e){}
+    }
+  };
+
+  // Peer-to-peer online duel. Host sends a shared set; both submit answers locally.
+  var onlinePeer=null, onlineConn=null, onlineHost=false, onlineQs=[], onlineIndex=0, onlineCorrect=0, onlineOther=null, onlineTimer=null, onlineDeadline=0, onlineRound=0, onlineFinished=false;
+  function onlineStatus(t){$('onlineStatus').textContent=t;}
+  function onlineSend(msg){if(onlineConn && onlineConn.open) onlineConn.send(msg);}
+  function onlineMakeQs(){
+    return Array.from({length:10},function(){var a=rand(2,12),b=rand(2,12);return {text:a+' × '+b,ans:a*b};});
+  }
+  function onlineStart(qs){
+    onlineQs=qs;onlineIndex=0;onlineCorrect=0;onlineFinished=false;$('onlineGame').hidden=false;
+    $('onlineScore').textContent='Верных ответов: 0 из 10';onlineNext();
+  }
+  function onlineNext(){
+    clearTimeout(onlineTimer);
+    if(onlineIndex>=onlineQs.length){
+      onlineFinished=true;$('onlineQuestion').textContent='Раунд завершён!';
+      $('onlineSubmit').disabled=true;$('onlineAnswer').disabled=true;
+      onlineSend({type:'score',name:$('onlineName').value.trim()||'Игрок',score:onlineCorrect});
+      $('onlineScore').textContent='Твой результат: '+onlineCorrect+'/10. Ждём результат соперника…';
+      onlineShowFinal();return;
+    }
+    $('onlineQuestion').textContent=(onlineIndex+1)+'. '+onlineQs[onlineIndex].text+' = ?';
+    $('onlineAnswer').value='';$('onlineAnswer').disabled=false;$('onlineSubmit').disabled=false;
+    onlineDeadline=Date.now()+10000;
+    onlineTimer=setTimeout(function(){onlineIndex++;onlineNext();},10000);
+  }
+  function onlineShowFinal(){
+    if(!onlineFinished || !onlineOther)return;
+    $('onlineQuestion').textContent=onlineCorrect===onlineOther.score?'Ничья!':(onlineCorrect>onlineOther.score?'Ты победил!':'Победил '+onlineOther.name+'!');
+    $('onlineScore').textContent='Ты: '+onlineCorrect+'/10 · '+onlineOther.name+': '+onlineOther.score+'/10';
+  }
+  function onlineAnswer(){
+    if(onlineFinished || $('onlineGame').hidden)return;
+    var v=Number($('onlineAnswer').value);
+    if($('onlineAnswer').value.trim()!=='' && v===onlineQs[onlineIndex].ans)onlineCorrect++;
+    onlineIndex++;$('onlineScore').textContent='Верных ответов: '+onlineCorrect+' из 10';onlineNext();
+  }
+  $('onlineSubmit').addEventListener('click',onlineAnswer);
+  $('onlineAnswer').addEventListener('keydown',function(e){if(e.key==='Enter')onlineAnswer();});
+  function onlineSetupPeer(isHost){
+    if(!window.Peer){onlineStatus('Не удалось загрузить PeerJS. Проверь интернет и перезагрузи страницу.');return;}
+    if(onlinePeer){try{onlinePeer.destroy();}catch(e){}}
+    onlineHost=isHost;onlineOther=null;$('onlineGame').hidden=true;
+    var code=$('onlineRoom').value.trim();
+    onlinePeer=isHost?new Peer():new Peer(code);
+    onlineStatus('Подключаемся…');
+    onlinePeer.on('open',function(id){
+      if(isHost){$('onlineRoom').value=id;onlineStatus('Комната создана! Отправь другу этот код: '+id+' · Ждём подключения…');}
+      else onlineStatus('Подключено к комнате '+code+' · Ожидаем данные…');
+    });
+    onlinePeer.on('connection',function(c){if(isHost)onlineConnect(c);});
+    onlinePeer.on('error',function(e){onlineStatus('Ошибка подключения: '+e.type+'. Проверь код и интернет.');});
+    if(!isHost){
+      var c=onlinePeer.connect(code,{reliable:true});
+      c.on('open',function(){onlineConnect(c);c.send({type:'hello',name:$('onlineName').value.trim()||'Игрок'});});
+    }
+  }
+  function onlineConnect(c){
+    onlineConn=c;
+    c.on('open',function(){onlineStatus('Соперник подключён!');});
+    c.on('data',function(m){
+      if(!m||!m.type)return;
+      if(m.type==='hello'){
+        onlineOther={name:m.name,score:null};onlineStatus('Соперник: '+m.name+' · Можно начинать!');
+        if(onlineHost){onlineQs=onlineMakeQs();onlineStart(onlineQs);onlineSend({type:'start',qs:onlineQs});}
+      } else if(m.type==='start'){onlineOther=onlineOther||{name:'Соперник'};onlineStart(m.qs);}
+      else if(m.type==='score'){onlineOther={name:m.name,score:m.score};onlineShowFinal();}
+    });
+    c.on('close',function(){onlineStatus('Связь с соперником потеряна.');});
+  }
+  $('onlineHost').addEventListener('click',function(){onlineSetupPeer(true);});
+  $('onlineJoin').addEventListener('click',function(){if(!$('onlineRoom').value.trim()){onlineStatus('Введи код комнаты друга.');return;}onlineSetupPeer(false);});
+
+  /* admin panel */
+  var ADMIN_LEVELS = [4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 23];
+  $('openAdmin').addEventListener('click', function () {
+    if (!unlocked.admin) {
+      if (coins < 47060) return;
+      coins -= 47060;
+      unlocked.admin = true;
+      saveCoins();
+      saveUnlocked();
+      renderCoins();
+      return;
+    }
+    renderCoins();
+    show('admin');
+  });
+  $('exAmount').addEventListener('input', renderExchange);
+  $('exBuy').addEventListener('click', function () {
+    var n = exAmount();
+    if (n === 0 || kud < n) { renderExchange(); return; }
+    kud -= n;
+    coins = Math.min(9999999, coins + n);
+    saveKud();
+    saveCoins();
+    renderCoins();
+  });
+  /* local accounts */
+  function accList() { try { return JSON.parse(localStorage.getItem('acc-list') || '{}') || {}; } catch (e) { return {}; } }
+  function accHash(str) {
+    var h1 = 0xdeadbeef, h2 = 0x41c6ce57;
+    for (var i = 0; i < str.length; i++) { var c = str.charCodeAt(i); h1 = Math.imul(h1 ^ c, 2654435761); h2 = Math.imul(h2 ^ c, 1597334677); }
+    h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+    h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+    return (4294967296 * (2097151 & h2) + (h1 >>> 0)).toString(36);
+  }
+  function accMsg(t) { $('accMsg').textContent = t; }
+  function renderAccount() {
+    var cur = window.ACC_CURRENT;
+    $('accNow').textContent = cur || 'Гость';
+    $('openAcc').textContent = cur ? 'Аккаунт: ' + cur : 'Аккаунт';
+    $('accLogout').hidden = !cur;
+    $('accForm').hidden = !!cur;
+  }
+  function accRead() {
+    var n = $('accName').value.trim(), p = $('accPass').value;
+    return { n: n, p: p, key: n.toLowerCase() };
+  }
+  $('openAcc').addEventListener('click', function () { accMsg(''); renderAccount(); show('account'); });
+  $('accBack').addEventListener('click', function () { show('menu'); });
+  $('accCreate').addEventListener('click', function () {
+    var a = accRead();
+    if (a.n.length < 3) { accMsg('Имя должно быть не короче 3 символов.'); return; }
+    if (!/^[0-9A-Za-zА-Яа-яЁёӘәҒғҚқҢңӨөҰұҮүҺһІі _.-]+$/.test(a.n)) { accMsg('В имени можно использовать буквы, цифры, пробел, точку, дефис и подчёркивание.'); return; }
+    if (a.p.length < 4) { accMsg('Пароль должен быть не короче 4 символов.'); return; }
+    var list = accList();
+    if (list[a.key]) { accMsg('Такое имя уже занято. Выбери другое или нажми «Войти».'); return; }
+    list[a.key] = { name: a.n, h: accHash(a.key + ':' + a.p) };
+    try {
+      localStorage.setItem('acc-list', JSON.stringify(list));
+      /* a new account starts with the progress you already have as a guest */
+      if (!window.ACC_CURRENT) {
+        var keys = [];
+        for (var i = 0; i < localStorage.length; i++) { var kk = localStorage.key(i); if (kk && kk.indexOf('schet-') === 0) keys.push(kk); }
+        keys.forEach(function (k) { localStorage.setItem('acc:' + a.key + ':' + k, localStorage.getItem(k)); });
+      }
+      localStorage.setItem('acc-current', a.key);
+    } catch (e) { accMsg('Не получилось сохранить аккаунт: браузер не даёт хранить данные.'); return; }
+    location.reload();
+  });
+  $('accLogin').addEventListener('click', function () {
+    var a = accRead(), list = accList();
+    if (!list[a.key] || list[a.key].h !== accHash(a.key + ':' + a.p)) { accMsg('Неверное имя или пароль.'); return; }
+    try { localStorage.setItem('acc-current', a.key); } catch (e) { accMsg('Не получилось войти: браузер не даёт хранить данные.'); return; }
+    location.reload();
+  });
+  $('accLogout').addEventListener('click', function () {
+    try { localStorage.removeItem('acc-current'); } catch (e) {}
+    location.reload();
+  });
+  (function () {
+    var cur = window.ACC_CURRENT, list = accList();
+    if (cur && list[cur]) window.ACC_CURRENT = list[cur].name;
+    renderAccount();
+  })();
+  $('boxBuy').addEventListener('click', openBox);
+  $('openColl').addEventListener('click', function () { renderColl(); show('coll'); });
+  $('collBack').addEventListener('click', function () { show('menu'); });
+  $('openCups').addEventListener('click', function () { renderCups(); show('cups'); });
+  $('cupsBack').addEventListener('click', function () { show('menu'); });
+  $('aBack').addEventListener('click', function () { renderBest(); show('menu'); });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-add]'), function (b) {
+    b.addEventListener('click', function () {
+      coins = Math.min(9999999, coins + parseInt(b.getAttribute('data-add'), 10));
+      saveCoins();
+      renderCoins();
+    });
+  });
+  $('aSetBtn').addEventListener('click', function () {
+    var v = parseInt($('aSet').value, 10);
+    if (isNaN(v) || v < 0) return;
+    coins = Math.min(9999999, v);
+    saveCoins();
+    renderCoins();
+  });
+  $('aOpenAll').addEventListener('click', function () {
+    ADMIN_LEVELS.forEach(function (lv) { unlocked[lv] = true; });
+    saveUnlocked();
+    renderCoins();
+  });
+  $('aLockAll').addEventListener('click', function () {
+    ADMIN_LEVELS.forEach(function (lv) { delete unlocked[lv]; });
+    saveUnlocked();
+    renderCoins();
+  });
+  $('aHc').addEventListener('click', function () {
+    if (unlocked.hardcore) { delete unlocked.hardcore; hardcoreOn = false; saveHardcore(); } else unlocked.hardcore = true;
+    saveUnlocked();
+    renderCoins();
+  });
+  $('aHelper').addEventListener('click', function () {
+    if (unlocked.helper) delete unlocked.helper; else unlocked.helper = true;
+    saveUnlocked();
+    renderCoins();
+  });
+  $('aMath').addEventListener('click', function () {
+    if (unlocked.math) delete unlocked.math; else unlocked.math = true;
+    saveUnlocked();
+    renderCoins();
+  });
+  $('aArt').addEventListener('click', function () {
+    if (unlocked.artifact) delete unlocked.artifact; else unlocked.artifact = true;
+    saveUnlocked();
+    renderCoins();
+  });
+
+  /* reset all progress */
+  var resetArmed = false, resetTimer = 0;
+  $('resetAll').addEventListener('click', function () {
+    var btn = $('resetAll');
+    clearTimeout(resetTimer);
+    if (!resetArmed) {
+      resetArmed = true;
+      btn.textContent = 'Точно сбросить? Нажми ещё раз';
+      resetTimer = setTimeout(function () { resetArmed = false; btn.textContent = 'Сбросить весь прогресс'; }, 4000);
+      return;
+    }
+    resetArmed = false;
+    try { SAVED_KEYS.forEach(function (k) { if (k !== 'schet-tutorial-done') localStorage.removeItem(k); }); } catch (e) {}
+    cups = { total: 0, correct: 0, rounds: 0 };
+    coll = {}; $('boxRes').innerHTML = ''; $('boxMsg').textContent = '';
+    coins = 0; kud = 0; roundCoins = 0; unlocked = OWNER_ADMIN ? { admin: true } : {}; hardcoreOn = false;
+    CUSTOM = { ops: ['+', '×'], lo: 2, hi: 12 }; customMode = 'type'; customSecs = 10;
+    LEVELS[8] = { sec: 10, title: 'Свой уровень', noReward: true };
+    renderBest();
+    renderCoins();
+    btn.textContent = 'Прогресс сброшен';
+    resetTimer = setTimeout(function () { btn.textContent = 'Сбросить весь прогресс'; }, 2000);
+  });
+
+  renderBest();
+  renderCoins();
+  if (!tutorialDone()) openTutorial();
+})();
+</script>
+
+<style>
+.language-box{display:flex;flex-direction:column;gap:6px;margin:12px 0}
+.language-box label{font-size:13px;color:var(--muted);font-weight:600}
+.language-box select{width:100%;min-height:46px;padding:8px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);font:inherit}
+</style>
+<script id="language-system">
+(function(){
+ const dictionary = {"Математическое мышление": {"en": "Mathematical Thinking", "kk": "Математикалық ойлау"}, "Это игра «Математическое мышление». В ней нужно считать, решать, создавать и открывать новые возможности.": {"en": "This is the “Mathematical Thinking” game. Calculate, solve, create, and unlock new possibilities.", "kk": "Бұл — «Математикалық ойлау» ойыны. Есепте, шеш, жаса және жаңа мүмкіндіктерді аш."}, "📱 На iPhone: открой игру в Safari → «Поделиться» → «На экран Домой».": {"en": "📱 On iPhone: open the game in Safari → Share → Add to Home Screen.", "kk": "📱 iPhone құрылғысында: ойынды Safari-де аш → Бөлісу → Негізгі экранға қосу."}, "Решай примеры в уме и вводи ответ. Не успел за отведённое время, пример засчитывается как ошибка. За каждый правильный ответ ты получаешь 100 монет.": {"en": "Solve problems mentally and enter the answer. If time runs out, it counts as a mistake. Earn 100 coins for each correct answer.", "kk": "Есептерді ойша шығарып, жауабын енгіз. Уақыт аяқталса, жауап қате болып есептеледі. Әр дұрыс жауап үшін 100 тиын аласың."}, "Монеты": {"en": "Coins", "kk": "Тиындар"}, "Магазин": {"en": "Shop", "kk": "Дүкен"}, "Туториал": {"en": "Tutorial", "kk": "Оқулық"}, "Задания": {"en": "Tasks", "kk": "Тапсырмалар"}, "🏆 Лидеры": {"en": "🏆 Leaderboard", "kk": "🏆 Көшбасшылар"}, "Хардкор: выкл": {"en": "Hardcore: off", "kk": "Хардкор: өшірулі"}, "Админ панель": {"en": "Admin panel", "kk": "Әкімші панелі"}, "Уровень": {"en": "Level", "kk": "Деңгей"}, "Таблица умножения": {"en": "Multiplication table", "kk": "Көбейту кестесі"}, "Задачи": {"en": "Word problems", "kk": "Мәтіндік есептер"}, "Алгебра": {"en": "Algebra", "kk": "Алгебра"}, "Квадраты": {"en": "Squares", "kk": "Квадраттар"}, "Кубы": {"en": "Cubes", "kk": "Кубтар"}, "Длинные примеры": {"en": "Long calculations", "kk": "Ұзын есептер"}, "Отрицательные числа": {"en": "Negative numbers", "kk": "Теріс сандар"}, "Более длинные примеры": {"en": "Longer calculations", "kk": "Ұзағырақ есептер"}, "Общие знания": {"en": "General knowledge", "kk": "Жалпы білім"}, "Калл 0": {"en": "Call 0", "kk": "Call 0"}, "Пока что здесь ничего нет": {"en": "Nothing here yet", "kk": "Әзірге мұнда ештеңе жоқ"}, "Пока что ничего нет.": {"en": "Nothing here yet.", "kk": "Әзірге ештеңе жоқ."}, "Назад": {"en": "Back", "kk": "Артқа"}, "Лучший результат: пока нет": {"en": "Best score: none yet", "kk": "Үздік нәтиже: әзірге жоқ"}, "Закрыт": {"en": "Locked", "kk": "Құлыпталған"}, "Открыт. 100 монет за верный ответ": {"en": "Unlocked. 100 coins per correct answer", "kk": "Ашық. Әр дұрыс жауапқа 100 тиын"}, "10 примеров, 11 секунд на каждый": {"en": "10 questions, 11 seconds each", "kk": "10 есеп, әрқайсысына 11 секунд"}, "10 примеров, 14 секунд. Пример решён неверно, выбери правильный ответ из трёх": {"en": "10 questions, 14 seconds each. If incorrect, choose the right answer from three options", "kk": "10 есеп, әрқайсысына 14 секунд. Қате болса, үш нұсқаның ішінен дұрыс жауапты таңда"}, "10 примеров, 16 секунд, выбери верный ответ из трёх. Деление, трёхзначные числа, большие произведения": {"en": "10 questions, 16 seconds each. Choose the right answer from three options. Division, three-digit numbers, large products", "kk": "10 есеп, әрқайсысына 16 секунд. Үш нұсқаның ішінен дұрыс жауапты таңда. Бөлу, үш таңбалы сандар, үлкен көбейтінділер"}, "10 примеров, 19 секунд, выбери верный ответ из шести. Квадраты, умножение двузначных, деление": {"en": "10 questions, 19 seconds each. Choose the right answer from six options. Squares, two-digit multiplication, division", "kk": "10 есеп, әрқайсысына 19 секунд. Алты нұсқаның ішінен дұрыс жауапты таңда. Квадраттар, екі таңбалы сандарды көбейту, бөлу"}, "10 примеров вперемешку из уровней 1, 2 и 3. Время и способ ответа у каждого примера, как на его уровне": {"en": "10 mixed questions from levels 1, 2, and 3. Each uses its level's time limit and answer method", "kk": "1, 2 және 3-деңгейлерден аралас 10 есеп. Әр есептің уақыты мен жауап беру тәсілі өз деңгейіндегідей"}, "10 задач, 24 секунды на каждую. Прочитай условие и впиши ответ": {"en": "10 problems, 24 seconds each. Read the question and enter the answer", "kk": "10 есеп, әрқайсысына 24 секунд. Шартын оқып, жауабын енгіз"}, "10 заданий, 29 секунд на каждое. Найди неизвестное: x, y, c или a": {"en": "10 questions, 29 seconds each. Find the unknown: x, y, c, or a", "kk": "10 тапсырма, әрқайсысына 29 секунд. Белгісізді тап: x, y, c немесе a"}, "10 примеров, 14 секунд на каждый. Возведи число в квадрат и впиши ответ": {"en": "10 questions, 14 seconds each. Square the number and enter the answer", "kk": "10 есеп, әрқайсысына 14 секунд. Санды квадратқа көтеріп, жауабын енгіз"}, "10 примеров, 19 секунд на каждый. Возведи число в куб и впиши ответ": {"en": "10 questions, 19 seconds each. Cube the number and enter the answer", "kk": "10 есеп, әрқайсысына 19 секунд. Санды кубқа көтеріп, жауабын енгіз"}, "10 примеров, 24 секунды на каждый. Несколько действий и скобки, впиши ответ": {"en": "10 questions, 24 seconds each. Multiple operations and parentheses; enter the answer", "kk": "10 есеп, әрқайсысына 24 секунд. Бірнеше амал мен жақшалар; жауабын енгіз"}, "10 примеров, 24 секунды на каждый. Ответы бывают отрицательными, для минуса есть отдельная кнопка": {"en": "10 questions, 24 seconds each. Answers can be negative; use the minus button", "kk": "10 есеп, әрқайсысына 24 секунд. Жауап теріс болуы мүмкін; минус батырмасын қолдан"}, "10 примеров, 24 секунды на каждый. Скобки и несколько действий; помощник показывает следующий шаг": {"en": "10 questions, 24 seconds each. Parentheses and multiple operations; the helper shows the next step", "kk": "10 есеп, әрқайсысына 24 секунд. Жақшалар мен бірнеше амал; көмекші келесі қадамды көрсетеді"}, "10 вопросов, 24 секунды на каждый. Геометрия, время и простые факты": {"en": "10 questions, 24 seconds each. Geometry, time, and simple facts", "kk": "10 сұрақ, әрқайсысына 24 секунд. Геометрия, уақыт және қарапайым деректер"}, "Выбери язык": {"en": "Choose a language", "kk": "Тілді таңда"}, "Обычный": {"en": "Normal", "kk": "Қалыпты"}, "Хардкор": {"en": "Hardcore", "kk": "Хардкор"}, "Турбо": {"en": "Turbo", "kk": "Турбо"}, "Правильно": {"en": "Correct", "kk": "Дұрыс"}, "Неправильно": {"en": "Incorrect", "kk": "Қате"}, "Время вышло": {"en": "Time's up", "kk": "Уақыт аяқталды"}, "Начать": {"en": "Start", "kk": "Бастау"}, "Продолжить": {"en": "Continue", "kk": "Жалғастыру"}, "Сбросить весь прогресс": {"en": "Reset all progress", "kk": "Барлық прогресті қалпына келтіру"}, "Прогресс сброшен": {"en": "Progress reset", "kk": "Прогресс қалпына келтірілді"}, "Ответ": {"en": "Answer", "kk": "Жауап"}, "Уровень завершён": {"en": "Level completed", "kk": "Деңгей аяқталды"}, "Результат": {"en": "Result", "kk": "Нәтиже"}, "Выбери режим": {"en": "Choose a mode", "kk": "Режимді таңда"}, "Подсказка": {"en": "Hint", "kk": "Көмек"}, "Все примеры": {"en": "All examples", "kk": "Барлық есептер"}, "Сложение": {"en": "Addition", "kk": "Қосу"}, "Вычитание": {"en": "Subtraction", "kk": "Азайту"}, "Умножение": {"en": "Multiplication", "kk": "Көбейту"}, "Деление": {"en": "Division", "kk": "Бөлу"}, "Ауданы тап": {"en": "Find the area", "kk": "Ауданы тап"}, "10 задач, 24 секунды на каждую. Найди площадь S: длина умножить на ширину": {"en": "10 problems, 24 seconds each. Find the area S: length times width", "kk": "10 есеп, әрқайсысына 24 секунд. S ауданын тап: ұзындығы мен енін көбейт"}, "24 секунды, найди площадь S": {"en": "24 seconds, find the area S", "kk": "24 секунд, S ауданын тап"}, "Длина": {"en": "Length", "kk": "Ұзындығы"}, "Периметр": {"en": "Perimeter", "kk": "Периметр"}, "10 задач, 24 секунды на каждую. Найди периметр прямоугольника: ширина × 2 + длина × 2": {"en": "10 problems, 24 seconds each. Find the perimeter of a rectangle: width × 2 + length × 2", "kk": "10 есеп, әрқайсысына 24 секунд. Төртбұрыштың периметрін тап: ені × 2 + ұзындығы × 2"}, "24 секунды, найди периметр P": {"en": "24 seconds, find the perimeter P", "kk": "24 секунд, P периметрін тап"}, "Часы": {"en": "Clock", "kk": "Сағат"}, "10 задач, 24 секунды на каждую. Перемотай время вперёд и впиши ответ в целых минутах": {"en": "10 problems, 24 seconds each. Fast-forward the time and enter the answer in whole minutes", "kk": "10 есеп, әрқайсысына 24 секунд. Уақытты алға айналдырып, жауабын бүтін минутпен енгіз"}, "24 секунды, перемотай время вперёд": {"en": "24 seconds, fast-forward the time", "kk": "24 секунд, уақытты алға айналдыр"}, "Найди ошибку": {"en": "Find the mistake", "kk": "Қатені тап"}, "3 варианта": {"en": "3 options", "kk": "3 нұсқа"}, "6 вариантов": {"en": "6 options", "kk": "6 нұсқа"}, "1, 2 и 3": {"en": "1, 2 and 3", "kk": "1, 2 және 3"}, "Кудрики": {"en": "Kudriks", "kk": "Кудриктер"}, "Кудрики:": {"en": "Kudriks:", "kk": "Кудриктер:"}, "Обмен монет": {"en": "Coin exchange", "kk": "Монета айырбастау"}, "1 монета = 1 кудрик": {"en": "1 coin = 1 kudrik", "kk": "1 монета = 1 кудрик"}, "Взять": {"en": "Take", "kk": "Алу"}, "Кубки": {"en": "Cups", "kk": "Кубоктар"}, "Аккаунт": {"en": "Account", "kk": "Аккаунт"}, "Слава": {"en": "Glory", "kk": "Даңқ"}, "Коллекция": {"en": "Collection", "kk": "Жинақ"}, "Бокс с символами": {"en": "Symbol box", "kk": "Таңбалар қорабы"}, "Алгебра N2": {"en": "Algebra N2", "kk": "Алгебра N2"}, "10 заданий, 29 секунд на каждое. Уравнения, периметр, площадь и степени": {"en": "10 tasks, 29 seconds each. Equations, perimeter, area and powers", "kk": "10 тапсырма, әрқайсысына 29 секунд. Теңдеулер, периметр, аудан және дәрежелер"}, "29 секунд, уравнения, периметр, площадь и степени": {"en": "29 seconds, equations, perimeter, area and powers", "kk": "29 секунд, теңдеулер, периметр, аудан және дәрежелер"}, "100 примеров": {"en": "100 examples", "kk": "100 есеп"}};
+ const select = document.getElementById('languageSelect');
+ if(!select) return;
+ let lang = 'ru';
+ try { lang = localStorage.getItem('math-language') || 'ru'; } catch(e) {}
+ if(!['ru','en','kk'].includes(lang)) lang='ru';
+ select.value=lang;
+ function translateText(value){
+   if(!value || lang==='ru') return value;
+   const entries=Object.keys(dictionary).sort((a,b)=>b.length-a.length);
+   let out=value;
+   for(const ru of entries){
+     if(out.includes(ru)) out=out.split(ru).join(dictionary[ru][lang]);
+   }
+   return out;
+ }
+ function translateNode(node){
+   if(node.nodeType===Node.TEXT_NODE){
+     const old=node.nodeValue, next=translateText(old);
+     if(next!==old) node.nodeValue=next;
+   } else if(node.nodeType===Node.ELEMENT_NODE && !['SCRIPT','STYLE','OPTION'].includes(node.tagName)){
+     for(const attr of ['placeholder','title','aria-label']){
+       if(node.hasAttribute(attr)){
+         const old=node.getAttribute(attr), next=translateText(old);
+         if(next!==old) node.setAttribute(attr,next);
+       }
+     }
+     for(const child of node.childNodes) translateNode(child);
+   }
+ }
+ function applyLanguage(next){
+   lang=next;
+   try{localStorage.setItem('math-language',lang)}catch(e){}
+   document.documentElement.lang=lang==='kk'?'kk':lang;
+   // Restore the Russian source first, then apply the selected language on reload-safe source strings.
+   // The page is reloaded so dynamic game text is generated in the selected language from startup.
+   try { location.reload(); } catch(e) { translateNode(document.body); }
+ }
+ select.addEventListener('change',()=>applyLanguage(select.value));
+ if(lang!=='ru'){
+   // Store language across reloads; translate static and dynamically inserted UI.
+   translateNode(document.body);
+   const observer=new MutationObserver(records=>{
+     for(const record of records){
+       if(record.type==='characterData') translateNode(record.target);
+       else for(const node of record.addedNodes) translateNode(node);
+     }
+   });
+   observer.observe(document.body,{subtree:true,childList:true,characterData:true});
+ }
+})();
+</script>
+</body>
+</html>

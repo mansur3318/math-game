@@ -1,0 +1,12 @@
+{
+  "name": "math-game-server",
+  "version": "1.0.0",
+  "description": "Server for the math game: shared cups leaderboard and online duel relay (no dependencies)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
